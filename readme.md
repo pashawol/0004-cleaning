@@ -1,5 +1,6 @@
 Сборка на основе pug. scss, Bootstrap 4.3.2
 
+https://pashawol.github.io/0004-cleaning/public
 
 4.3.2
 1. Перенес шрифты в файл _fonts.scss https://github.com/pashawol/mega-front-starter/blob/master/sourse/sass/_fonts.scss
