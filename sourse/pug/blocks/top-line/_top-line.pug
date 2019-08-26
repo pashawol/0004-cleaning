@@ -1,0 +1,35 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row
+				.col-xl-auto.col-md
+					.row
+						+e.col.col-xl-auto.col-sm
+							+e.logo(href="/")
+								.d-none.d-lg-block
+									+pic('logo','png','','',0)
+								+e.DIV.logo-text
+									+e.DIV.logo-text-title.d-none.d-sm-block «Технология чистоты»
+									| Аренда, обслуживание и&nbsp;замена&nbsp;грязезащитных ковров
+			 
+				+e.col.col
+					+e.text
+						+e.icon-wrap
+							+pic("mark","png",'','',0)
+						div 
+							+e.text-title Мы находимся:
+							| г.&nbsp;Магнитогорск,
+				+e.col.col-auto
+					+e.text--tel
+						+e.icon-wrap
+							+icon("whatsapp")
+							+icon("viber")
+						div
+							+e.text-title Звоните с 9.00 до 18.00
+							+e.tel(href="tel:+8(3519)224477") +8 (3519) 22 44 77
+							div
+								+e.sm-link.link-modal.d-xl-none(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Заказать звонок
+				+e.col.col-auto.d-xl-block.d-none
+					+e.btn.link-modal(  data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке") Заказать звонок
+	// end .top-line

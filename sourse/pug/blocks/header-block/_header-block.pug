@@ -1,0 +1,37 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+e.text-block
+				+e.label 
+					+e.label-title Аренда&nbsp;+ замена
+					+e.label-text  от&nbsp;1&nbsp;до&nbsp;7 раз&nbsp;в&nbsp;неделю
+				h1 
+					strong Почему грязезащитные коврики&nbsp;&mdash; лучшее решение 
+					| 
+					| для входной зоны офисов, ТЦ&nbsp;и&nbsp;других помещений
+				.row
+					mixin item(i,t,p)
+						+e.col.col-auto
+							+e.img-wrap
+								+pic('header-img-' + i,'jpg','bg',0)
+							+e.col-title= t
+							block
+					+item('1','Задерживают 95%')
+						+e.col-text грязи, песка, 
+							br
+							| воды и&nbsp;пыли
+					+item('2','Предотвращают')
+						+e.col-text падение людей, 
+							br
+							| когда скользко
+					+item('3','Сокращают необходимость')
+						+e.col-text постоянного мытья полов, мешающего свободному проходу клиентов
+				+e.btn(href="#") Узнать подробнее
+					.btn-icon-wrap 
+						+icon('tap')
+	// end header-block
+	
+
+
+		

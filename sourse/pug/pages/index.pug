@@ -1,0 +1,71 @@
+extends layout/main.pug
+
+
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-always/_s-always.pug
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-clean-saving/_s-clean-saving.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-washing/_s-washing.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-logos/_s-logos.pug
+block variables
+	- let  mainPage= null
+block title
+	title title
+
+block pagecontent
+ 
+	+header()
+		<picture class="lazy picture-bg"> 
+			<source srcset="#" data-srcset="img/@2x/webp/header-bg.webp" type="image/webp" media="(min-width:576px)">
+			<source srcset="#" data-srcset="img/@1x/webp/header-bg-sm.webp" type="image/webp">
+			<source srcset="img/@2x/header-bg.jpg" data-srcset="img/@2x/header-bg.jpg" type="image/jpg" media="(min-width:576px)">
+			<source srcset="#" data-srcset="img/@1x/header-bg-sm.jpg" type="image/jpg"><img class="object-fit-js" src="#" data-src="img/@2x/header-bg.jpg" alt="">
+		</picture>
+		+top-line()
+		+header-block()
+	.container
+		+b.head-items
+			.row
+				+e.col.col-sm-6
+					+e.item
+						+e.text 
+							+icon("check-mark")
+							div  Все востребованные
+								| 
+								strong размеры в наличии
+						table
+							tr
+								td 115х80
+								td 115х240
+							
+							tr
+								td 85х150
+								td 150х250
+						+e.item-foot Приедем и&nbsp;сами подберем оптимальный размер
+				+e.col.col-sm-6
+					+e.item
+						+e.text 
+							+icon("check-mark")
+							div Количество ковров 
+								| 
+								strong без ограничения
+						
+						+e.text 
+							+icon("check-mark")
+							div Замена вне графика
+								| 
+								strong на следующий день
+	+s-always
+	+s-content
+	+s-clean-saving
+	+s-shipping
+	+s-washing
+	+s-steps
+	+s-logos
+	+s-form()
+	//- +mob-mnu()
+	//- +s-contact()
+	//- +footer()
+

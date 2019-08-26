@@ -1,0 +1,368 @@
+.header-block {
+	display: block;
+	color: #ffffff;
+	@include media-breakpoint-up(lg)  {
+
+		padding-top: rem(35);
+		padding-bottom: rem(120);
+	}
+	@include media-breakpoint-up(md) {
+		text-align: left;
+	}
+	text-align: center;
+	padding-top: rem(22);
+	padding-bottom: rem(70);
+	
+	&__text-block{
+		position: relative;
+		@include media-breakpoint-up(xl) {
+			
+		}
+		@include media-breakpoint-up(md) {
+			max-width: rem(840);
+
+			// max-width: rem(560);
+		} 
+		
+	}
+	h1{
+		@extend .h2;
+		line-height: 1.22;
+		// font-weight: 500;
+		padding-bottom: rem(45);
+		font-weight: 300;
+		max-width: em(220);
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+		}
+		margin-left: auto;
+		margin-right: auto;
+		strong{
+			font-style: italic;
+			font-weight: normal;
+		}
+
+	}
+	&__img-wrap{
+		width: rem(79);
+		height: rem(79);
+		position: relative;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+		}
+		margin-left: auto;
+		margin-right: auto;
+		&::after{
+			content: '';
+			background-image: url(../img/svg/error.svg);
+			width: $h4-font-size;
+			height: $h4-font-size;
+			background-size: 100% ;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		picture{
+			border-radius: 50%;
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+	// @include bg("")
+	}
+.row{
+	@include media-breakpoint-up(lg){
+
+		justify-content: space-between;
+	}
+	justify-content: center;
+	// justify-content: space-around;
+}
+	&__col{
+		font-weight: 300;
+		max-width: calc(#{rem(295)} + 30px);
+		&-title{
+			font-style: italic;
+			font-weight: normal;
+		}
+	 
+	@include rfs(rem(20)); 
+		margin-bottom: rem(50);
+		 
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-success;
+		@extend .btn-icon;
+		// width: rem(312);
+		@include media-breakpoint-up(sm) {
+
+			// width: rem(232);
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(50);
+		// width: rem(262);
+
+		@include media-breakpoint-up(xl) {
+
+			margin-right: rem(10);
+		}
+	}
+	&__check-wrap{
+		// background-image: url(../img/svg/polygon.svg);
+		width: rem(26px);
+		height: rem(31px);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: rem(15);
+		flex-shrink: 0;
+		.icon{
+			font-size: rem(13);
+			fill: url(#success-gradient);
+			filter: drop-shadow(0 2px 0 #fff);
+		}
+	}
+	&__text-check{
+		text-align: left;
+		@extend .h6;
+		max-width: rem(258);
+		padding-top: rem(5);
+		font-weight: 500;
+		line-height: 1.39;
+		@include media-breakpoint-down(xs) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__item-wrap{
+		position: absolute;
+		@include media-breakpoint-up(lg) {
+			left: 100%;
+			
+		}
+		left: 90%;
+		top: rem(20);
+		@include media-breakpoint-up(xl) {
+
+			margin-left: rem(98);
+		}
+		.row{
+			flex-wrap: nowrap;
+		}
+
+	}
+	&__item{
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		width: rem(162px);
+		height: rem(274px); 
+		text-align: center;
+		color: #5b5b5b !important;
+		padding-left: rem(28);
+		padding-right: rem(28);
+		padding-top: rem(145);
+		display: block;
+		text-decoration: none !important;
+		z-index: 2;
+		position: relative;
+		&::before{
+			content: '';
+			// position: absolute;
+
+			@include a-cent();
+			// top: 0;
+			height: 60%;
+			width: 100%;
+			z-index: -1;
+			box-shadow: 0 $h6-font-size rem(40px) rgba(255, 255, 255, 0.38);
+		}
+		&--1{
+			// @include bg("header-rect-1.png")
+		}
+		
+		&--2{
+			// @include bg("header-rect-2.png");
+			margin-top: rem(90);
+			padding-top: rem(155);
+		}
+
+	}
+	&__link{
+		color: $primary !important;
+	}
+	&__title{
+		color: #5b5b5b !important;
+		@extend .h6;
+		margin-bottom: 0;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+
+	&__label{
+		position: absolute;
+		left: 100%;
+		width: rem(161px);
+		height: rem(148px);
+		box-shadow: 0 4px 24px 12px rgba(255, 255, 255, 0.15), 0 4px 0 #8e8e8e;
+		border-radius: 58px;
+		background-color: #ffffff;
+		background-image: linear-gradient(to top, #c8c8c8 0%, #ffffff 100%);
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+
+			display: flex;
+		}
+		display: none;
+		flex-direction: column;
+		padding: rem(10) rem(30);
+		top: rem(135);
+		margin-left: rem(15);
+		
+		&-title{
+			opacity: 0.99;
+			text-shadow: 0 2px 0 rgba(255, 255, 255, 0.78);
+			color: #010101;
+			// font-family: "Berlingske Slab - D Bd Italic";
+			font-style: italic;
+			// font-size: $h6-font-size;
+			@extend .h6;  
+			line-height: 1.28;
+		}
+		&-text{
+			color: #000000;
+			font-weight: 300;
+			font-size: rem(15);
+		}
+	}
+	// 
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	// 
+	@include media-breakpoint-between(md, xl) {}
+
+	// 
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	// 
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {
+		text-align: center;
+	}
+}
+
+.head-items{
+	@include media-breakpoint-up(xl) {
+
+		padding-right: rem(80);
+		max-width: 770px;
+	}
+	@include media-breakpoint-up(lg) {
+
+		max-width: 620px;
+		margin-top: rem(-160);
+		margin-left: auto;
+		padding-top: 0;
+	}
+	padding-top: rem(60);
+	.row{
+		@include roww(23);
+	}
+	.icon{
+		font-size: rem(31);
+		fill: url(#whatsapp-gradient);
+		margin-right: rem(17);
+		flex-shrink: 0;
+	}
+	&__text{
+		display: flex;
+		@extend .h5;
+		font-weight: 300;
+		strong{
+			display: inline-block;
+		}
+		margin-bottom: rem(27);
+	}
+	table{
+		margin-bottom: rem(10);
+	}
+	td{
+		padding-right: rem(10);
+		padding-bottom: rem(10);
+		font-weight: 300;
+	}
+	&__col{
+		@include media-breakpoint-up(md) {
+			// margin-bottom: 0;
+			margin-bottom: rem(25);
+		}
+		margin-bottom: rem(40);
+	}
+	&__col:nth-child(2) &__item{
+		position: relative;
+		overflow: hidden;
+		&::after{
+			content: url(../img/@2x/logo-light.png);
+			position: absolute;
+			bottom: rem(-30);
+			left: rem(-30);
+		}
+	}
+	&__item{
+		box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
+		border-radius: 5px;
+		background-color: #ffffff;
+	
+		@include media-breakpoint-up(md) {
+
+			padding: rem(40) rem(40);
+		}
+		padding: rem(40) rem(20);
+		height: 100%;
+		position: relative;
+		z-index: 2;
+		&::before{
+			content: '';
+			z-index: -1;
+			border-radius: 3px;
+			border: 1px dashed #dddddd;
+			width: calc(100% - 10px);
+			height: calc(100% - 10px);
+			@include a-cent;
+		}
+	}
+	&__item-foot{
+		font-weight: 500;
+	}
+}

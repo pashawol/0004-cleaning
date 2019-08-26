@@ -1,0 +1,54 @@
+mixin s-always()
+	// start s-always
+	+b.SECTION.s-always.section.lazy-background#s-always&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2
+					strong Всегда чистый пол 
+					| 
+					| 
+					| благодаря качеству ковров
+			.row
+				 
+				mixin item(i)
+					+e.item&attributes(attributes)
+						+e.img-wrap
+							+pic('s-always-img-' + i,'png','',0)
+						block
+				.col-lg-3.col-md-4
+					+item('1')(class="s-always__item--1")
+						+e.title
+								strong  Подходят для любого пола:
+								| 
+								| кафельного, бетонного или&nbsp;деревянного
+						+e.text  Основа ковра с&nbsp;резиновыми шипами&nbsp;&mdash; ковер не&nbsp;скользит по&nbsp;полу
+					
+					+item('2')(class="s-always__item--2")
+						+e.title
+								strong При сворачивании грязного
+								| 
+								| ковра под ним чисто
+						+e.text  Резиновая основа не&nbsp;пропускает влагу
+				.col
+					+e.central-img.text-center.d-none.d-md-block
+						+pic("s-always-img",'jpg','','lazy',0)
+					+item('5')(class="s-always__item--5")
+						+e.title
+								strong Выглядят 
+								br
+								| презентабельно
+						+e.text  Есть несколько цветовых решений. Если нужно&nbsp;&mdash; закажем ковры в&nbsp;корпоративном цвете с&nbsp;логотипом
+				.col-lg-3.col-md-4
+					+item('3')
+						+e.title
+								strong Вся грязь остается в&nbsp;ковре,
+								| 
+								| дальше по&nbsp;полу не&nbsp;растаскивается
+						+e.text  1&nbsp;м&sup2; покрытия впитывает до&nbsp;7&nbsp;литров влаги, песка и&nbsp;мелкой грязи&nbsp;&mdash; благодаря ворсу высотой 8&nbsp;мм
+					
+					+item('4')(class="s-always__item--4")
+						+e.title
+								strong Не затаптываются
+						+e.text  Нейлоновым волокнам ворса  нипочем даже ежедневный большой поток народа
+					
+	// end s-always

@@ -1,0 +1,7 @@
+
+
+@include font-face ("BerlingskeSlab", "../fonts/BerlingskeSlab-DBd", $file-formats: woff2 );
+@include font-face ("BerlingskeSlab", "../fonts/BerlingskeSlab-DBdItalic", 400, italic, $file-formats: woff2 );
+@include font-face ("BerlingskeSlab", "../fonts/BerlingskeSlab-Lt", 300, $file-formats: woff2 );
+@include font-face ("BerlingskeSlab", "../fonts/BerlingskeSlab-Md", 500, $file-formats: woff2 );
+@include font-face ("BerlingskeSlab", "../fonts/BerlingskeSlab-XBd", bold, $file-formats: woff2 );

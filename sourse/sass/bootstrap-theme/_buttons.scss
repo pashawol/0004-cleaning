@@ -1,0 +1,264 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 2; 
+  font-weight: bold;
+  &::after,
+  &:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $btn-border-radius; 
+    @include mt;
+    opacity: 0;
+  }
+  &:hover{
+    box-shadow:none;
+    &::before{
+      opacity: 1;
+    }
+    // background-image: linear-gradient(to top, lighten(#d4d4d4, 5%) 0%, #ffffff 100%);
+  }
+  &:focus{
+    &::after{
+      opacity: 1;
+    }
+    &::before{
+      opacity: 0;
+    }
+    
+  }
+  // border: $btn-border-width solid transparent;
+  border: none; 
+  text-transform: uppercase;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  padding-bottom: $input-btn-padding-y *.9;
+  // @include transition($btn-transition);
+  @include mt;
+
+  @include hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    // box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+// @each $color, $value in $theme-colors {
+//   .btn-#{$color} {
+//     @include button-variant($value, $value);
+//   }
+// }
+
+// @each $color, $value in $theme-colors {
+//   .btn-outline-#{$color} {
+//     @include button-outline-variant($value);
+//   }
+// }
+// .btn-white{
+  
+//   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.65);
+// color: #1c1c1c;
+//   box-shadow: 0 3px 0 #bcbcbc, inset 0 0 4px #f2f2f2; 
+//   background-color: #fff;
+//   background-image: linear-gradient(to top, #d4d4d4 0%, #ffffff 100%);
+//   box-shadow: 0 3px 0 #bcbcbc, inset 0 0 4px #f2f2f2;  
+//   &:before{ 
+//     background-image: linear-gradient(to top, lighten(#d4d4d4, 5%) 0%, #ffffff 100%); 
+//   } 
+//   &::after{ 
+//     background-image: linear-gradient(to top, darken(#d4d4d4, 5%) 0%, #ffffff 100%);
+//   }
+//   &:focus{
+//     box-shadow: 0 3px 0 #bcbcbc, inset 0 0 4px #f2f2f2; 
+
+//   }
+// }
+.btn-icon{
+  padding-right: rem(103);
+  padding-left: rem(40);
+  overflow: hidden;
+  &:hover{
+    .btn-icon-wrap{
+      background-color: #87ad36;
+    }
+  }
+  
+  &:focus{
+    .btn-icon-wrap{
+      background-color: #87ad36;
+    }
+  }
+
+}
+.btn-icon-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  width: rem(80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87ad36;
+  border-radius: 0 rem(60) rem(60) 0;
+  @include mt;
+  .icon{
+    color: #ffffff;
+    font-size: rem(43);
+  }
+}
+.btn-primary{ 
+  color: #fff !important;  
+  box-shadow: 0 4px 24px 12px rgba(142, 215, 255, 0.32), 0 4px 0 #267696, inset 0 0 7px rgba(255, 255, 255, 0.35); 
+  border-radius: 28px;
+  
+  background-image: linear-gradient(to top, #1b8aca 0%, #31c5fc 100%); 
+  text-shadow: 0 2px 0 #167db0, 0 0 7px rgba(255, 255, 255, 0.24);
+  &:before{ 
+    box-shadow: inset 0 0 7px rgba(255, 255, 255, 0.35); 
+   
+    background-image: linear-gradient(to top, #149ae7 0%, #73d9ff 100%); 
+  } 
+  &::after{ 
+    background-image: linear-gradient(to top, #077bbd 0%, #1db9f3 100%);
+  } 
+  &:focus{
+    box-shadow: 0 4px 0 #0f6486, inset 0 0 7px rgba(255, 255, 255, 0.35);
+  }
+}
+.btn-success{ 
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.56), 0 0 7px rgba(255, 255, 255, 0.29);
+  color: #2e2e2e !important; 
+  box-shadow: 0 4px 24px 12px rgba(165, 237, 46, 0.15), 0 5px 0 #7a9735, inset 0 0 13px 3px rgba(255, 255, 255, 0.23); 
+  
+  background-image: linear-gradient(to top, #8bb72a 0%, #c3ec8a 100%);
+  &:before{ 
+    box-shadow: inset 0 0 13px 3px rgba(255, 255, 255, 0.23); 
+    
+    background-image: linear-gradient(to top, #8fc516 0%, #dbffa8 100%);
+  } 
+  &::after{  
+     
+    background-image: linear-gradient(to top, #79a519 0%, #b0e467 100%);
+  } 
+  &:focus{
+    box-shadow: 0 5px 0 #67861c, inset 0 0 13px 3px rgba(255, 255, 255, 0.23); 
+  }
+}
+ 
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+// .btn-lg {
+//   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+// }
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm); 
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

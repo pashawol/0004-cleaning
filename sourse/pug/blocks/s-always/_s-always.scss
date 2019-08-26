@@ -1,0 +1,130 @@
+.s-always {
+	.section-title{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(600);
+	}
+	&__central-img{
+margin-bottom: rem(60);
+	}
+	&__img-wrap{
+		min-height: rem(95);
+		margin-bottom: rem(15);
+		position: relative;
+		z-index: 2;
+		&::after {
+			content: url(../img/@2x/logo-light.png);
+			position: absolute;
+			bottom: rem(-30);
+			left: -.875rem;
+			z-index: -1;
+	}
+	}
+	&__item{
+
+		line-height: 1.44;
+		@include media-breakpoint-up(md) {
+
+			margin-bottom: rem(5);
+		}
+		margin-bottom: rem(35);
+		max-width: rem(380);
+		margin-left: auto;
+		margin-right: auto;
+
+		&--2{
+			@include media-breakpoint-up(md) {
+				padding-left: rem(25);
+				padding-top: rem(40);
+				
+				margin-right: -20px;
+			}
+		}
+		&--5{
+			padding-bottom: rem(5);
+			@include media-breakpoint-up(lg) {
+			.s-always__text{
+
+					padding-left: rem(70);
+					max-width: rem(340);
+				}
+				.s-always__title{
+					padding-left: rem(50);
+				}
+			}
+
+			.s-always__img-wrap{
+				min-height: 1px;
+			}
+		}
+		&--4{
+			.s-always__title{
+				padding-bottom: 0;
+				margin-bottom: 0;
+				margin-top: rem(-30);
+			}
+		}
+	}
+	&__title{
+		@extend .h6;
+		color: #010101;
+		font-weight: 300;
+		line-height: 1.44;
+		padding-bottom: rem(10);
+		position: relative;
+		z-index: 2;
+		strong{
+			font-style: italic;
+			display: inline-block;
+			// margin-bottom: rem(10);
+		}
+	}
+	&__text{
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(md) {
+
+			padding-left: rem(35);
+		}
+		color: #757575;
+		font-weight: 500;
+	}
+	.container{
+		position: relative;
+		&::after{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	&.visible .container{
+		&::after{
+			content: url(../img/@2x/label.png);
+		}
+	}	
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}
