@@ -66,16 +66,16 @@ margin-bottom: rem(60);
 		}
 	}
 	&__title{
-		@extend .h6;
+		@extend h6;
 		color: #010101;
-		font-weight: 300;
-		line-height: 1.44;
+		font-weight: 300; 
 		padding-bottom: rem(10);
 		position: relative;
 		z-index: 2;
 		strong{
-			font-style: italic;
+			// font-style: italic;
 			display: inline-block;
+			font-weight: normal;
 			// margin-bottom: rem(10);
 		}
 	}
@@ -92,8 +92,19 @@ margin-bottom: rem(60);
 	.container{
 		position: relative;
 		&::after{
-			position: absolute;
-			right: 0;
+			@include media-breakpoint-up(md) {
+
+				position: absolute;
+			}
+			text-align: center;
+			display: block;
+			@include media-breakpoint-up(lg) { 
+				right: 0;
+			}
+			@include media-breakpoint-up(md){
+
+				right: rem(-60);
+			}
 			top: 0;
 		}
 	}
@@ -103,7 +114,9 @@ margin-bottom: rem(60);
 		}
 	}	
 		 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(55);
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

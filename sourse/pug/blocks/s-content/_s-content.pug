@@ -1,9 +1,23 @@
 mixin s-content()
 	// start s-content
-	+b.s-content.section.block-with-lazy#s-content&attributes(attributes)
+	+b.s-content.section.lazy-background#s-content&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-content
-				
 			.row
+				.col
+					+e.text-block
+						+e.icon-wrap
+							+icon("question")
+						+e.title 
+							strong &laquo;У&nbsp;нас уже есть ковер, 
+							| 
+							| зачем нужен другой?&raquo;
+						p Во&nbsp;многих салонах красоты, магазинах, бутиках одежды, ресторанах, кафе, столовых и&nbsp;в&nbsp;примерочных ковры есть. 
+
+						p Ковры, которые не&nbsp;менялись годами, а&nbsp;только подметались и&nbsp;мылись&nbsp;&mdash; по&nbsp;факту они из&nbsp;грязезащитного покрытия превратились в&nbsp;линолеум и&nbsp;своих функций не&nbsp;выполняют.
+						+e.block
+							strong Георгий Докукин, 
+							|  
+							| руководитель компании &laquo;Технология чистоты&raquo;
+				.col-lg-6.align-self-end.order-lg-first
+					+pic("man","png")
 	// end s-content

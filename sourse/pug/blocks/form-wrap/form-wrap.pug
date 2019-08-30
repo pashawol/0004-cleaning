@@ -7,6 +7,7 @@ mixin input(placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+
 		else
 			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap
@@ -16,13 +17,142 @@ mixin input(placeholder,  t='text', label, name= t)
 				+t(t,placeholder, name)&attributes(attributes)
 		else
 			+t(t,placeholder, name)&attributes(attributes)
+		block
 	// +e.input-wrap
+mixin select(label,name= t)
+	+e.input-wrap
+		if label
+			label
+				+e.SPAN.title= label
+				+e.SELECT.input.form-control(name= name)&attributes(attributes)
+					block
+		else
+			+e.SELECT.input.form-control(name= name)&attributes(attributes)
+				block
+	// +e.input-wrap
+
+mixin inputName()
+	+input("Иван","text",'Как к вам обращаться?',"name")(required)
+mixin order-block(btn="Обсудить заказ")
+	input(type="hidden" class='order' name='order' value="")
+	input(type="hidden" class='color' name='color' value="") 
+	block
+	+inputName()
+	+form-tabs-modal()
+	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+	+e.toggle 
+		span Напишите, что вам нужно, если хотите
+	+e.toggle-block
+		+input("Текст сообщения","textarea",'',"comment")
+	+e.btn(type='submit')= btn
+	+polite
+
+mixin form-tabs()
+	.tabs
+		+e.group
+			+e.group-title Куда отправить прайс и&nbsp;каталог?
+			
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel2')
+					| Звонок
+				.tabs__btn
+					+icon('email')
+					| E-mail
+				
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+				.tabs__btn
+					+icon('viber')
+					| Viber
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (900) 444-44-44","tel",'Введите телефон:',"tel")(required)
+			
+			.tabs__content
+				+input("email@email.info","email",'Введите email:')
+			
+			.tabs__content
+				+input("+7 (900) 444-44-44","tel",'Введите whatsapp:',"whatsapp")
+			
+			.tabs__content
+				+input("+7 (900) 444-44-44","tel",'Введите viber:',"viber")
+
+mixin form-tabs-modal()
+	.tabs
+		+e.group 
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel2')
+					| Звонок
+			 
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+				.tabs__btn
+					+icon('viber')
+					| Viber
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (900) 444-44-44","tel",'Введите телефон:',"tel")(required)
+			 
+			.tabs__content
+				+input("+7 (900) 444-44-44","tel",'Введите whatsapp:',"whatsapp")
+			
+			.tabs__content
+				+input("+7 (900) 444-44-44","tel",'Введите viber:',"viber")
+
+mixin form-tabs()
+	.tabs
+		+e.group
+			+e.group-title Как с вами связаться?
+			
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel2')
+					| Звонок
+				.tabs__btn
+					+icon('email')
+					| E-mail
+				
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+				.tabs__btn
+					+icon('viber')
+					| Viber
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (900) 444-44-44","tel",'Введите телефон:',"tel")(required)
+					+e.small-text Перезвоним, чтобы обсудить размеры коврика
+			
+			.tabs__content
+				+input("email@email.info","email",'Введите email:')
+					+e.small-text Напишем, чтобы обсудить размеры коврика
+			
+			.tabs__content
+				+input("+7 (900) 444-44-44","tel",'Введите whatsapp:',"whatsapp")
+					+e.small-text Напишем, чтобы обсудить размеры коврика
+			
+			.tabs__content
+				+input("+7 (900) 444-44-44","tel",'Введите viber:',"viber")
+					+e.small-text Напишем, чтобы обсудить размеры коврика
 
 
 //- wrapper for form
-mixin form-wrap()
+mixin form-wrap(order)
 	+b.form-wrap&attributes(attributes)
-		form
+		form(action="thanks.php" method="post")
+			if !order 
+				input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
+			else
+				input(type='hidden', class="order", name='order', value= order ) 
+			input(type="hidden" class='utm_source' name='utm_source')
+			input(type="hidden" class='utm_term' name='utm_term')
 			block
 //- /wrapper for form
 
@@ -46,6 +176,23 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.polite.text-secondary  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь  с&nbsp;
+		a(href="privacy-policy.pdf" target="_blank").tdu.text-success Политикой конфиденциальности
+
+
+mixin form-body()
+	
+	+input("Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')(required)
+	//- +e.title  Выберите время для звонка
+	+b.LABEL.custom-input-time
+		+e.INPUT.input(type='checkbox', name='scr8-time', )
+		+e.SPAN.lab
+		+e.SPAN.text--now 
+			span.d-none.d-sm-inline Позвонить сейчас
+			span.d-sm-none Сейчас
+		+e.SPAN.text--time 
+			span.d-none.d-sm-inline Позвонить по времени
+			span.d-sm-none По времени
+	//- +input(" Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')
+	.toggle-wrap-input-js
+		+input("Например, 10 апреля в 14:00","text",'','time')

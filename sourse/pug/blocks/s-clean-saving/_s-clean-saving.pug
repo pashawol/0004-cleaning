@@ -3,7 +3,76 @@ mixin s-clean-saving()
 	+b.SECTION.s-clean-saving.section.lazy-background#s-clean-saving&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-clean-saving
+				h2 
+					strong Чистота 
+					+e.icon-wrap
+						+icon("plus")
+					| 
+					|  экономия
 				
 			.row
+				mixin item(i)
+					+e.item
+						+e.img-wrap
+							+icon('clean-'+ i)
+						block
+				+e.col.col-md-6
+					+e.col-title Заказывая аренду ковриков:
+					+item("1")
+						+e.text 
+							strong  Сокращаете время на&nbsp;уборку 
+							|
+							|  и&nbsp;поддержание чистоты 
+							
+							|на&nbsp;
+							
+							strong  47%
+				 
+					+item("2")
+						+e.text 
+							strong  Уменьшаете расходы
+							|
+							| на&nbsp;моющие средства 
+							br
+							| на&nbsp;
+							strong  14%
+					 
+					+item("3")
+						+e.text 
+							a.link-modal(  data-src="#modal-economy" href="javascript:;" data-order="Заказать звонок в шапке") 
+								|
+								strong Оплачиваете только аренду 
+								| 
+								| без стоимости 
+								br
+								| ковра
+								+e.icon-wrap
+									+icon("question")
+					 
+				// /+e.col.col-6
+
+
+
+				+e.col.col
+					+e.col-title Плюс:
+					+item("4")
+						+e.text Чем 
+							|
+							strong   больше замен в&nbsp;месяц, 
+							| 
+							| тем
+							|
+							| 
+							strong  ниже цена 
+							| 
+							| одной
+					+item("5")
+						+e.text 
+							strong Доставка&nbsp;&mdash; бесплатно
+					+e.block-pdf
+						+e.link-pdf(href="pdf.pdf" target="_blank")
+							+e.label Pdf
+							+e.text-pdf Смотреть прайс
+						+e.block-pdf-text.d-none.d-sm-block Для сетевых компаний цены могут отличаться
+				// /+e.col.col-6
 	// end s-clean-saving

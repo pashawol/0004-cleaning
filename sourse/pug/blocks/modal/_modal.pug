@@ -2,21 +2,22 @@
 mixin modal()  
 	 
 	
-	//- +form-wrap()(id="modal-call" class="  modal-win modal-form" )
-	//- 	.row.no-gutters
-	//- 		.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-1.jpg")
-	//- 		.col
-	//- 			+e.top-title Укажите контактные данные 
-	//- 				+e.text--lg и&nbsp;удобное время для звонка
-	//- 			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
-	//- 			+e.text--sm Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-				 
-	//- 			input(type="hidden" class='order' name='order' value="")
-	//- 			+inputName()
-	//- 			+form-body()
-	//- 			+e.btn(type='submit') Перезвоните мне 
-	//- 			+polite
-	//- // #modal-call
+	+form-wrap()(id="modal-call" class="  modal-win modal-form" )
+		.row.no-gutters
+			.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-1.jpg")
+			.col
+				+e.top-title Укажите контактные данные 
+					+e.text--lg и&nbsp;удобное время для звонка
+				//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
+				+e.text--sm Специалист компании позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
+					br
+					| мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;17:00
+				input(type="hidden" name="formwithtime" value="formwithtime") 
+				+inputName()
+				+form-body()
+				+e.btn(type='submit') Перезвоните мне 
+				+polite
+	// #modal-call
 	
 	//- +form-wrap()(id="modal-order" class="  modal-win modal-form" )
 	//- 	.row.no-gutters
@@ -62,13 +63,76 @@ mixin modal()
 	//- // #modal-tech
 
 
-	//- +b.modal-win--sm.--storage(id="modal-storage" class="text-center" )
-	//- 	+pic('modal-sm-img','png','','',0)
-	//- 	.h5.text-center.strong Бесплатное хранение
-	//- 		br
-	//- 		| на нашей территории
-	//- 	.h6.fw-500 Вы&nbsp;можете купить шлакоблок даже зимой, а&nbsp;строить летом. Ваш шлакоблок будет храниться на&nbsp;транспортных поддонах, чтобы он&nbsp;не&nbsp;соприкасался с&nbsp;землей.
-	//- // #modal-storage
+	+b.modal-win--sm(id="modal-replacement" class="text-center" )
+		+e.title Вы&nbsp;можете выбрать замену от&nbsp;1&nbsp;до&nbsp;7&nbsp;раз в&nbsp;неделю
+		+e.item.row
+			+e.img-wrap.col-auto
+				+pic("modal-i-1",'png','','',0)
+			.col Если у&nbsp;вас салон, который в&nbsp;день посещает 5-10&nbsp;человек, то&nbsp;достаточно 1&nbsp;замены в&nbsp;неделю.
+		
+		+e.item.row
+			+e.img-wrap.col-auto
+				+pic("modal-i-2",'png','','',0)
+			.col Если гипермаркет, то&nbsp;можно менять 
+				br
+				| каждый день.
+		
+		+e.item.row
+			+e.img-wrap.col-auto
+				+pic("modal-i-3",'png','','',0)
+			.col Сроки замены прописываем в&nbsp;договоре, а&nbsp;если нужно заменить вне графика&nbsp;&mdash; доставим после звонка на&nbsp;следующий день
+		
+	// #modal-replacement
+	+b.modal-win--sm(id="modal-clean" class="text-center" )
+		+pic('modal-clean-img','jpg','','')
+		p Часто говорят: &laquo;Купим ковер и&nbsp;пусть его уборщицы чистят&raquo;. 
+
+		p Не&nbsp;получится&nbsp;&mdash; при чистке вручную или даже моющим пылесосом: пятна и&nbsp;сильные загрязнения остаются, а&nbsp;грязь скапливается в&nbsp;нижнем слое покрытия. 
+
+		p С&nbsp;каждым разом ковер будет впитывать все меньше грязи. Ту, что не&nbsp;впитает, растащат по&nbsp;полу.
+	// #modal-clean
+	
+	+b.modal-win--md(id="modal-economy" class="text-center" ) 
+		+e.modal-head
+			+e.title Экономия за год 27 776 Р
+			.h6.text-secondary если взять ковер в аренду
+		table
+			thead
+				tr
+					th
+					th Ковры в собственности
+					th Ковры в аренде
+			tbody
+
+				tr
+					td Стоимость 1&nbsp;ковра, руб.  (нужно 2&nbsp;шт., чтобы менять)
+					td(data-title="Ковры в собственности") 8 500&times;2=17&nbsp;000
+					td(data-title="Ковры в аренде") —
+				
+				tr
+					td Стирка, руб.
+					td(data-title="Ковры в собственности") 250 за&nbsp;1&nbsp;м&sup2; ~ 517
+					td(data-title="Ковры в аренде") —
+				tr
+					td Количество стирок
+					td(data-title="Ковры в собственности") 4
+					td(data-title="Ковры в аренде") 4
+				tr
+					td Расходы на&nbsp;содержание ковров в&nbsp;месяц, руб.
+					td(data-title="Ковры в собственности") 2 068
+					td(data-title="Ковры в аренде") 1 170
+				tr
+					td Расходы на&nbsp;содержание ковров в&nbsp;год, руб.
+					td(data-title="Ковры в собственности") 24 816
+					td(data-title="Ковры в аренде") 14 040
+				tr
+					td Итого расходы в год, руб.
+					td(data-title="Ковры в собственности")
+						+e.total 41 816
+					td(data-title="Ковры в аренде")
+						+e.total 14 040
+
+	// #modal-economy
 
 	//- +b.modal-win--know(id="modal-know" class="text-center"  )
 	//- 	+e.head-text
@@ -95,15 +159,15 @@ mixin modal()
 	//- // #modal-pay
 	
 	//- +form-wrap()(id="modal-one-click" class="modal-win--sm  modal-win modal-form" )
-	//- 	input(type="hidden" class='order' name='order' value="") 
-	//- 	input(type="hidden" class='color' name='color' value="") 
-	//- 	.h5.strong Введите номер телефона
-	//- 	.h6.fw-500 Специалист перезвонит и оформит заказ
-	//- 	.row.no-gutters
-	//- 		.col
-	//- 			+input("+7 (900) 444-44-44","tel",'',"tel")(required)
-	//- 		.col-auto
-	//- 			+e.btn.btn-success(type='submit') Ок
-	//- 	+polite
-	//- // #modal-one-click
+		input(type="hidden" class='order' name='order' value="") 
+		input(type="hidden" class='color' name='color' value="") 
+		.h5.strong Введите номер телефона
+		.h6.fw-500 Специалист перезвонит и оформит заказ
+		.row.no-gutters
+			.col
+				+input("+7 (900) 444-44-44","tel",'',"tel")(required)
+			.col-auto
+				+e.btn.btn-success(type='submit') Ок
+		+polite
+	// #modal-one-click
 	// modal

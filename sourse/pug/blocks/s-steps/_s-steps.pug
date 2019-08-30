@@ -3,7 +3,53 @@ mixin s-steps()
 	+b.SECTION.s-steps.section.lazy-background#s-steps&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-steps
-				
-			.row
+				h2 
+					strong При замене ковра
+					| 
+					| ваше участие не нужно 
+				+e.text Организуем процесс без&nbsp;лишней&nbsp;мороки
+			.row.justify-content-between
+				mixin item(i)
+					+e.col.col-md-4
+						+e.item
+							+pic('steps-'+ i,'png')
+							block
+				+item("1") 
+					+e.text--item.h6 Доставляем ковер в&nbsp;согласованное время, с&nbsp;8&nbsp;до&nbsp;16&nbsp;часов, &mdash;
+						| 
+						strong сворачиваем грязный и&nbsp;стелим чистый за&nbsp;1&nbsp;минуту
+				+item("2") 
+					+e.text--item.h6
+						strong Подписываем акт приема -передачи 
+						| 
+						| у&nbsp;любого сотрудника компании: охранника, кассира, консьержа
+				+item("3")
+					+e.text--item.h6
+						strong В&nbsp;конце месяца
+						| 
+						| предоставляем ведомость  для сверки расчетов
+					+e.label
+						strong  Работаем
+							br
+							| с&nbsp;2009 года
+						| &mdash;&nbsp;ни&nbsp;разу ни&nbsp;одной
+						br
+						| ошибки в&nbsp;ведомостях
+			+e.foot
+				.row
+					.col-sm-auto
+						+e.foot-block
+							+e.icon-wrap
+								+icon("question")
+							+e.text--foot.h5
+								strong &laquo;Как быть с&nbsp;договором 
+								br
+								| когда грязи нет?&raquo;
+					.col
+						+e.foot-block-right
+							p Вы&nbsp;можете приостановить договор на&nbsp;летний период или совсем отменить аренду. 
+
+							p А&nbsp;также в&nbsp;любое время
+								|
+								strong  можете поменять размер ковра и&nbsp;периодичность его замены
 	// end s-steps

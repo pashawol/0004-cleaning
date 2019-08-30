@@ -1,4 +1,52 @@
 .s-logos {
+	padding-top: rem(0);
+	h2{
+		strong{
+			// text-align: center;
+			display: block;
+		}
+		padding-bottom: rem(10);
+	}
+	.section-title{
+		padding-bottom: rem(15);
+	}
+	&__item{
+		text-align: center;
+		// ьфч-width: rem(270px);
+		height: rem(172px);
+		box-shadow: 0 2px ($h4-font-size * .9) 6px rgba(48, 48, 48, 0.05);
+		border-radius: rem(5px);
+		background-color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+		text-align: center;
+		position: relative;
+		padding: rem(30);
+		&::before{
+			content: '';
+			position: absolute;
+			@include a-cent;
+			z-index: -1;
+			border-radius: 3px;
+			border: 1px dashed #dddddd;
+			width: calc(100% - 6px);
+			height: calc(100% - 6px);
+		}
+		img{
+			flex-shrink: 0;
+		}
+	}
+	&__slide{
+		padding: $h4-font-size rem(15);
+	}
+	&__slider{
+		margin-left: -$h4-font-size;
+		margin-right: -$h4-font-size;
+		// padding-left: $h4-font-size;
+		// padding-right: $h4-font-size;
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

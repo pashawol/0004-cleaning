@@ -1,4 +1,113 @@
 .s-content {
+	background-color: #605f63;
+	color: #ffffff;
+	padding-top: rem(0);
+	padding-bottom: 0 !important;
+	picture{
+		@include media-breakpoint-up(lg) {
+
+			margin-left: rem(-30);
+			margin-right: rem(-30);
+			width: auto;
+		}
+	}
+	&.visible{
+		@include bg("content-bg.jpg");
+	}
+	&__icon-wrap{
+	 
+			border-width: 50%;
+			border-color: rgb(137, 138, 140);
+			border-style: solid;
+			border-radius: 50%;
+			box-shadow: 0px 4px 23.45px 11.55px rgba(255, 255, 255, 0.32);
+		 	background-color: #ffffff;
+			width: rem(38);
+			height: rem(38); 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg){
+				margin-left: 0;
+			}
+			margin-left: auto;
+			margin-right: auto;
+			.icon{
+				fill: url(#primary-gradient);
+				font-size: $h5-font-size;
+			}
+	}
+	&__text-block{
+		z-index: 2;
+		@include media-breakpoint-up(lg) {
+
+			margin-left: -30px;
+			max-width: rem(400);
+			padding-top: rem(80);
+			padding-bottom: rem(60);
+		}
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+		margin-right: auto;
+		margin-left: auto;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 100%;
+			top: rem(45);
+			margin-left: rem(60);
+			width: rem(140);
+			height: rem(513);
+		}
+	}
+	&__title{
+		@extend .h3;
+		font-weight: 300;
+		padding-bottom: rem(15); 
+		strong{
+			font-style: italic;
+		}
+	}
+	&.visible &__text-block::before{
+		// content: url(../img/@2x/text-right.png);
+		@include media-breakpoint-up(lg) {
+
+			background-image: url(../img/@2x/text-right.png);
+		}
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&__block{
+		max-width: rem(260);
+		padding-left: rem(16);
+		position: relative;
+		margin-top: rem(35);
+		// padding-top: rem(20);
+		position: relative;
+		// &::before
+		strong{
+			@extend .h6;
+			margin-bottom: 0;
+			color: #ffffff;
+		}
+		color: #f4f4f4;
+		&::before{
+			content: '';
+			width: rem(6px);
+			height: rem(6px);
+			background-color: #bbe47c;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: rem(5);
+		}
+	}
+
+	p{
+		color: #f4f4f4;
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

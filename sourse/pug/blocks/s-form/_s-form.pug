@@ -1,9 +1,26 @@
 mixin s-form()
 	// start s-form
-	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
+	+b.s-form.section#s-form.bg-wrap&attributes(attributes)
+		+pic("form-bg",'jpg','bg')(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 s-form
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 
+							strong Испытайте грязезащитные 
+							| 
+							| коврики в&nbsp;своем помещении
+						+e.text Оставьте контакты&nbsp;&mdash; мы
+							br
+							| перезвоним, чтобы уточнить, какой размер ковра оптимален для вашего помещения 
+					+e.logo
+						+pic("logo-form",'png','','',0)
+				.col
+					+form-wrap("Испытать коврики")
+						+form-tabs()
+							input(type="hidden" name="formprice" value="formprice") 
+						
+						+inputName()
+						+e.btn(type="submit")  Испытать коврики
+						+polite
 	// end s-form

@@ -1,7 +1,45 @@
 .footer {
-		
+  // position: 100px;
+  border-top: 1px solid #f3f3f3;
+  padding-bottom: rem(20);
+   .top-line{
+    color: #1f1f1f;
+    padding-top: rem(60);
+    margin-bottom: rem(10);
+    &__tel,
+    &__logo{
+      
+      color: #1f1f1f !important;
+      text-align: left;
+     }
+     &__logo{
+       display: flex ;
+       @include media-breakpoint-up(xs) {
+         max-width: rem(310);
+       }
+     }
+  }
+  &__foot{
+    font-size: $small;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+    text-align: center;
+    a{
+      border-bottom: 1px solid;
+    }
+  }
+  &__develop{
+    // color: #757575;
 
-
+    @extend .text-secondary;
+    a{
+      @extend .text-success;
+    }
+  }
+  &__foot-col{
+    padding-bottom: rem(10);
+  }
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -39,5 +77,12 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+&__btn,
+&__text{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(195);
+}
+}
 }

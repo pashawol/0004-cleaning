@@ -72,7 +72,7 @@
                   <div>
                     <div class="top-line__text-title">Звоните с 9.00 до 18.00
                     </div><a class="top-line__tel" href="tel:+8(3519)224477">+8 (3519) 22 44 77</a>
-                    <div><a class="top-line__sm-link link-modal d-xl-none" data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке">Заказать звонок</a>
+                    <div><a class="top-line__sm-link d-xl-none link-modal" data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке">Заказать звонок</a>
                     </div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@
                     <div class="header-block__col-text">постоянного мытья полов, мешающего свободному проходу клиентов
                     </div>
                   </div>
-              </div><a class="header-block__btn" href="#">Узнать подробнее
+              </div><a class="header-block__btn scroll-link" href="#s-always">Узнать подробнее
               <div class="btn-icon-wrap"> 
                 <svg class="icon icon-tap ">
                   <use xlink:href="img/svg/sprite.svg#tap"></use>
@@ -317,12 +317,37 @@
       </section>
       <!-- end s-always-->
       <!-- start s-content-->
-      <div class="s-content section block-with-lazy" id="s-content">
+      <div class="s-content section lazy-background" id="s-content">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-content</h2>
+          <div class="row">
+            <div class="col">
+              <div class="s-content__text-block">
+                <div class="s-content__icon-wrap">
+                  <svg class="icon icon-question ">
+                    <use xlink:href="img/svg/sprite.svg#question"></use>
+                  </svg>
+                </div>
+                <div class="s-content__title"> <strong>&laquo;У&nbsp;нас уже есть ковер, </strong> 
+                  зачем нужен другой?&raquo;
+                </div>
+                <p>Во&nbsp;многих салонах красоты, магазинах, бутиках одежды, ресторанах, кафе, столовых и&nbsp;в&nbsp;примерочных ковры есть. </p>
+                <p>Ковры, которые не&nbsp;менялись годами, а&nbsp;только подметались и&nbsp;мылись&nbsp;&mdash; по&nbsp;факту они из&nbsp;грязезащитного покрытия превратились в&nbsp;линолеум и&nbsp;своих функций не&nbsp;выполняют.</p>
+                <div class="s-content__block"><strong>Георгий Докукин, </strong> 
+                  руководитель компании &laquo;Технология чистоты&raquo;
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-end order-lg-first">
+              <!-- picture-->
+              <picture class="lazy"> 
+                <source srcset="#" data-srcset="img/@2x/webp/man.webp" type="image/webp" media="(min-width:576px)"/>
+                <source srcset="#" data-srcset="img/@1x/webp/man.webp" type="image/webp"/>
+                <source srcset="#" data-srcset="img/@2x/man.png" type="image/png" media="(min-width:576px)"/>
+                <source srcset="#" data-srcset="img/@1x/man.png" type="image/png"/><img src="#" data-src="img/@2x/man.png" alt=""/>
+              </picture>
+              <!-- /picture-->
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-content-->
@@ -330,29 +355,150 @@
       <section class="s-clean-saving section lazy-background" id="s-clean-saving">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-clean-saving</h2>
+            <h2> <strong>Чистота </strong>
+              <div class="section-title__icon-wrap">
+                <svg class="icon icon-plus ">
+                  <use xlink:href="img/svg/sprite.svg#plus"></use>
+                </svg>
+              </div> 
+               экономия
+            </h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="s-clean-saving__col col-md-6">
+              <div class="s-clean-saving__col-title">Заказывая аренду ковриков:
+              </div>
+                  <div class="s-clean-saving__item">
+                    <div class="s-clean-saving__img-wrap">
+                      <svg class="icon icon-clean-1 ">
+                        <use xlink:href="img/svg/sprite.svg#clean-1"></use>
+                      </svg>
+                    </div>
+                    <div class="s-clean-saving__text"> <strong> Сокращаете время на&nbsp;уборку </strong>
+                       и&nbsp;поддержание чистоты 
+                      на&nbsp;<strong> 47%</strong>
+                    </div>
+                  </div>
+                  <div class="s-clean-saving__item">
+                    <div class="s-clean-saving__img-wrap">
+                      <svg class="icon icon-clean-2 ">
+                        <use xlink:href="img/svg/sprite.svg#clean-2"></use>
+                      </svg>
+                    </div>
+                    <div class="s-clean-saving__text"> <strong> Уменьшаете расходы</strong>
+                      на&nbsp;моющие средства <br/>на&nbsp;<strong> 14%</strong>
+                    </div>
+                  </div>
+                  <div class="s-clean-saving__item">
+                    <div class="s-clean-saving__img-wrap">
+                      <svg class="icon icon-clean-3 ">
+                        <use xlink:href="img/svg/sprite.svg#clean-3"></use>
+                      </svg>
+                    </div>
+                    <div class="s-clean-saving__text"> <a class="link-modal" data-src="#modal-economy" href="javascript:;" data-order="Заказать звонок в шапке">
+                         <strong>Оплачиваете только аренду </strong> 
+                        без стоимости <br/>ковра
+                        <div class="s-clean-saving__icon-wrap">
+                          <svg class="icon icon-question ">
+                            <use xlink:href="img/svg/sprite.svg#question"></use>
+                          </svg>
+                        </div></a>
+                    </div>
+                  </div>
+            </div>
+            <!-- /+e.col.col-6-->
+            <div class="s-clean-saving__col col">
+              <div class="s-clean-saving__col-title">Плюс:
+              </div>
+                  <div class="s-clean-saving__item">
+                    <div class="s-clean-saving__img-wrap">
+                      <svg class="icon icon-clean-4 ">
+                        <use xlink:href="img/svg/sprite.svg#clean-4"></use>
+                      </svg>
+                    </div>
+                    <div class="s-clean-saving__text">
+                      Чем <strong>  больше замен в&nbsp;месяц, </strong> 
+                      тем
+                      
+                       <strong> ниже цена </strong> 
+                      одной
+                    </div>
+                  </div>
+                  <div class="s-clean-saving__item">
+                    <div class="s-clean-saving__img-wrap">
+                      <svg class="icon icon-clean-5 ">
+                        <use xlink:href="img/svg/sprite.svg#clean-5"></use>
+                      </svg>
+                    </div>
+                    <div class="s-clean-saving__text"> <strong>Доставка&nbsp;&mdash; бесплатно</strong>
+                    </div>
+                  </div>
+              <div class="s-clean-saving__block-pdf"><a class="s-clean-saving__link-pdf" href="pdf.pdf" target="_blank"><span class="s-clean-saving__label">Pdf</span><span class="s-clean-saving__text-pdf">Смотреть прайс</span></a>
+                <div class="s-clean-saving__block-pdf-text d-none d-sm-block">Для сетевых компаний цены могут отличаться
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-6-->
+          </div>
         </div>
       </section>
       <!-- end s-clean-saving-->
       <!-- start s-shipping-->
       <section class="s-shipping section lazy-background" id="s-shipping">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-shipping</h2>
+          <div class="row">
+            <div class="col d-none d-lg-block">
+              <!-- picture-->
+              <picture> 
+                <source srcset="img/@2x/webp/shipping-img.webp" type="image/webp"/>
+                <!-- /webp images  --><img src="img/@2x/shipping-img.png" alt=""/>
+              </picture>
+              <!-- /picture-->
+            </div>
+            <div class="s-shipping__col col-lg-4">
+              <div class="s-shipping__text">
+                <h2><strong>Доставим завтра! </strong> 
+                  В&nbsp;будни, в&nbsp;любую погоду
+                </h2>
+                <p>Чтобы проверить, как &laquo;работает&raquo; ковер, позвоните нам и&nbsp;уже завтра ковер будет у&nbsp;вас&nbsp;&mdash; на&nbsp;3&nbsp;дня бесплатно.</p>
+                <p>
+                  При желании можете пользоваться ковром дальше, мы&nbsp;заключаем договор&nbsp;&mdash; <a class="link-modal tdu" data-src="#modal-replacement" href="javascript:;">замена до&nbsp;7&nbsp;раз в&nbsp;неделю	<span class="s-shipping__icon-wrap">
+                    <svg class="icon icon-question ">
+                      <use xlink:href="img/svg/sprite.svg#question"></use>
+                    </svg></span></a></p><picture class="d-lg-none text-center">  
+<source srcset="img/@1x/webp/shipping-img.webp" type="image/webp">
+<source srcset="img/@1x/shipping-img.png" type="image/png"><img src="img/@2x/shipping-img.png" alt="">
+</picture><a class="s-shipping__btn scroll-link" href="#s-form">Получить ковер бесплатно</a>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </section>
       <!-- end s-shipping-->
       <!-- start s-washing-->
-      <section class="s-washing section lazy-background" id="s-washing">
+      <section class="s-washing section lazy-background bg-wrap" id="s-washing">
+        <!-- picture-->
+        <picture class="lazy picture-bg"> 
+          <source srcset="#" data-srcset="img/@2x/webp/s-washing-bg.webp" type="image/webp"/>
+          <!-- /webp images  --><img class="object-fit-js" src="#" data-src="img/@2x/s-washing-bg.jpg" alt=""/>
+        </picture>
+        <!-- /picture-->
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-washing</h2>
+          <div class="s-washing__text-block">
+            <h2> <strong>В каждую замену</strong> 
+              «новый» ковер
+            </h2>
+            <div class="s-washing__text">Вместо чистки — стирка:
+            </div>
+            <ul>
+              <li>стираем в&nbsp;2&nbsp;этапа, чтобы очистить ворс от&nbsp;грязи и&nbsp;песка до&nbsp;самого основания;</li>
+              <li>очищаем вручную от&nbsp;волос, жвачек и&nbsp;ниток</li>
+              <li>чистые ковры перевозим отдельно от&nbsp;грязных</li>
+            </ul>
+            <div class="s-washing__foot"> <strong>Стираем и&nbsp;отжимаем</strong> 
+              в&nbsp;промышленных стиральных машинах
+            </div><a class="s-washing__label link-modal" data-src="#modal-clean" href="javascript:;"><strong><span class="tdu">Только стирка гарантирует,</span></strong><span class="tdu"> что ковер <br/>в&nbsp;следующую укладку выполнит свои функции на&nbsp;100%</span></a>
           </div>
-          <div class="row"></div>
         </div>
       </section>
       <!-- end s-washing-->
@@ -360,9 +506,83 @@
       <section class="s-steps section lazy-background" id="s-steps">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-steps</h2>
+            <h2> <strong>При замене ковра</strong> 
+              ваше участие не нужно 
+            </h2>
+            <div class="section-title__text">Организуем процесс без&nbsp;лишней&nbsp;мороки
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="row justify-content-between">
+                <div class="s-steps__col col-md-4">
+                  <div class="s-steps__item">
+                    <!-- picture-->
+                    <picture class="lazy"> 
+                      <source srcset="#" data-srcset="img/@2x/webp/steps-1.webp" type="image/webp" media="(min-width:576px)"/>
+                      <source srcset="#" data-srcset="img/@1x/webp/steps-1.webp" type="image/webp"/>
+                      <source srcset="#" data-srcset="img/@2x/steps-1.png" type="image/png" media="(min-width:576px)"/>
+                      <source srcset="#" data-srcset="img/@1x/steps-1.png" type="image/png"/><img src="#" data-src="img/@2x/steps-1.png" alt=""/>
+                    </picture>
+                    <!-- /picture--> 
+                    <div class="s-steps__text s-steps__text--item h6">
+                      Доставляем ковер в&nbsp;согласованное время, с&nbsp;8&nbsp;до&nbsp;16&nbsp;часов, &mdash; <strong>сворачиваем грязный и&nbsp;стелим чистый за&nbsp;1&nbsp;минуту</strong>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-steps__col col-md-4">
+                  <div class="s-steps__item">
+                    <!-- picture-->
+                    <picture class="lazy"> 
+                      <source srcset="#" data-srcset="img/@2x/webp/steps-2.webp" type="image/webp" media="(min-width:576px)"/>
+                      <source srcset="#" data-srcset="img/@1x/webp/steps-2.webp" type="image/webp"/>
+                      <source srcset="#" data-srcset="img/@2x/steps-2.png" type="image/png" media="(min-width:576px)"/>
+                      <source srcset="#" data-srcset="img/@1x/steps-2.png" type="image/png"/><img src="#" data-src="img/@2x/steps-2.png" alt=""/>
+                    </picture>
+                    <!-- /picture--> 
+                    <div class="s-steps__text s-steps__text--item h6"><strong>Подписываем акт приема -передачи </strong> 
+                      у&nbsp;любого сотрудника компании: охранника, кассира, консьержа
+                    </div>
+                  </div>
+                </div>
+                <div class="s-steps__col col-md-4">
+                  <div class="s-steps__item">
+                    <!-- picture-->
+                    <picture class="lazy"> 
+                      <source srcset="#" data-srcset="img/@2x/webp/steps-3.webp" type="image/webp" media="(min-width:576px)"/>
+                      <source srcset="#" data-srcset="img/@1x/webp/steps-3.webp" type="image/webp"/>
+                      <source srcset="#" data-srcset="img/@2x/steps-3.png" type="image/png" media="(min-width:576px)"/>
+                      <source srcset="#" data-srcset="img/@1x/steps-3.png" type="image/png"/><img src="#" data-src="img/@2x/steps-3.png" alt=""/>
+                    </picture>
+                    <!-- /picture-->
+                    <div class="s-steps__text s-steps__text--item h6"><strong>В&nbsp;конце месяца</strong> 
+                      предоставляем ведомость  для сверки расчетов
+                    </div>
+                    <div class="s-steps__label"><strong> Работаем<br/>с&nbsp;2009 года</strong>&mdash;&nbsp;ни&nbsp;разу ни&nbsp;одной<br/>ошибки в&nbsp;ведомостях
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="s-steps__foot">
+            <div class="row">
+              <div class="col-sm-auto">
+                <div class="s-steps__foot-block">
+                  <div class="s-steps__icon-wrap">
+                    <svg class="icon icon-question ">
+                      <use xlink:href="img/svg/sprite.svg#question"></use>
+                    </svg>
+                  </div>
+                  <div class="s-steps__text s-steps__text--foot h5"><strong>&laquo;Как быть с&nbsp;договором </strong><br/>когда грязи нет?&raquo;
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="s-steps__foot-block-right">
+                  <p>Вы&nbsp;можете приостановить договор на&nbsp;летний период или совсем отменить аренду. </p>
+                  <p>
+                    А&nbsp;также в&nbsp;любое время<strong> можете поменять размер ковра и&nbsp;периодичность его замены</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-steps-->
@@ -370,23 +590,384 @@
       <section class="s-logos section lazy-background" id="s-logos">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-logos</h2>
+            <h2> <strong>Арендой наших ковров пользуются</strong> 
+              крупные торговые сети, банки,
+            </h2>
+            <div class="section-title__text">операторы сотовой связи и&nbsp;другие компании
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="s-logos__slider s-logos__slider--js">
+            <div class="s-logos__slide">
+              <div class="s-logos__item"><img class="res-i" src="#" data-lazy="img/@2x/logo-1.png" alt=""/>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-logos__slide">
+              <div class="s-logos__item"><img class="res-i" src="#" data-lazy="img/@2x/logo-2.png" alt=""/>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-logos__slide">
+              <div class="s-logos__item"><img class="res-i" src="#" data-lazy="img/@2x/logo-3.png" alt=""/>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-logos__slide">
+              <div class="s-logos__item"><img class="res-i" src="#" data-lazy="img/@2x/logo-4.png" alt=""/>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-logos__slide">
+              <div class="s-logos__item"><img class="res-i" src="#" data-lazy="img/@2x/logo-1.png" alt=""/>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+          </div>
         </div>
       </section>
       <!-- end s-logos-->
       <!-- start s-form-->
-      <div class="s-form section block-with-lazy" id="s-form">
+      <div class="s-form section bg-wrap" id="s-form">
+        <!-- picture-->
+        <picture class="lazy picture-bg"> 
+          <source srcset="#" data-srcset="img/@2x/webp/form-bg.webp" type="image/webp" media="(min-width:576px)"/>
+          <source srcset="#" data-srcset="img/@1x/webp/form-bg.webp" type="image/webp"/>
+          <source srcset="#" data-srcset="img/@2x/form-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+          <source srcset="#" data-srcset="img/@1x/form-bg.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/form-bg.jpg" alt=""/>
+        </picture>
+        <!-- /picture-->
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-form</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="section-title">
+                <h2> <strong>Испытайте грязезащитные </strong> 
+                  коврики в&nbsp;своем помещении
+                </h2>
+                <div class="section-title__text">Оставьте контакты&nbsp;&mdash; мы<br/>перезвоним, чтобы уточнить, какой размер ковра оптимален для вашего помещения 
+                </div>
+              </div>
+              <div class="s-form__logo">
+                <!-- picture-->
+                <picture> 
+                  <source srcset="img/@2x/webp/logo-form.webp" type="image/webp"/>
+                  <!-- /webp images  --><img src="img/@2x/logo-form.png" alt=""/>
+                </picture>
+                <!-- /picture-->
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-wrap">
+                <form action="thanks.php" method="post">
+                  <input class="order" type="hidden" name="order" value="Испытать коврики"/>
+                  <input class="utm_source" type="hidden" name="utm_source"/>
+                  <input class="utm_term" type="hidden" name="utm_term"/>
+                  <div class="tabs">
+                    <div class="form-wrap__group">
+                      <div class="form-wrap__group-title">Как с вами связаться?
+                      </div>
+                      <div class="tabs__caption">
+                        <div class="tabs__btn active">
+                          <svg class="icon icon-tel2 ">
+                            <use xlink:href="img/svg/sprite.svg#tel2"></use>
+                          </svg>Звонок
+                        </div>
+                        <div class="tabs__btn">
+                          <svg class="icon icon-email ">
+                            <use xlink:href="img/svg/sprite.svg#email"></use>
+                          </svg>E-mail
+                        </div>
+                        <div class="tabs__btn">
+                          <svg class="icon icon-whatsapp ">
+                            <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                          </svg>WhatsApp
+                        </div>
+                        <div class="tabs__btn">
+                          <svg class="icon icon-viber ">
+                            <use xlink:href="img/svg/sprite.svg#viber"></use>
+                          </svg>Viber
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" name="formprice" value="formprice"/>
+                    <div class="tabs__wrap">
+                      <div class="tabs__content active">
+                        <div class="form-wrap__input-wrap">
+                          <label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
+                          </label>
+                          <div class="form-wrap__small-text">Перезвоним, чтобы обсудить размеры коврика
+                          </div>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="tabs__content">
+                        <div class="form-wrap__input-wrap">
+                          <label><span class="form-wrap__title">Введите email:</span><input class="form-wrap__input" type="email" placeholder="email@email.info" name="email"/>
+                          </label>
+                          <div class="form-wrap__small-text">Напишем, чтобы обсудить размеры коврика
+                          </div>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="tabs__content">
+                        <div class="form-wrap__input-wrap">
+                          <label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="whatsapp"/>
+                          </label>
+                          <div class="form-wrap__small-text">Напишем, чтобы обсудить размеры коврика
+                          </div>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="tabs__content">
+                        <div class="form-wrap__input-wrap">
+                          <label><span class="form-wrap__title">Введите viber:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="viber"/>
+                          </label>
+                          <div class="form-wrap__small-text">Напишем, чтобы обсудить размеры коврика
+                          </div>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-wrap__input-wrap">
+                    <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
+                    </label>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <button class="form-wrap__btn" type="submit"> Испытать коврики
+                  </button>
+                  <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь  с&nbsp;<a class="tdu text-success" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-form-->
+      <footer class="footer block-with-lazy">
+        <div class="container">
+          <!-- start .top-line-->
+          <div class="top-line block-with-lazy">
+            <div class="row">
+              <div class="top-line__col col">
+                <div class="top-line__text">
+                  <div class="top-line__icon-wrap">
+                    <!-- picture-->
+                    <picture> 
+                      <source srcset="img/@2x/webp/mark.webp" type="image/webp"/>
+                      <!-- /webp images  --><img src="img/@2x/mark.png" alt=""/>
+                    </picture>
+                    <!-- /picture-->
+                  </div>
+                  <div> 
+                    <div class="top-line__text-title">Мы находимся:
+                    </div>г.&nbsp;Магнитогорск,
+                  </div>
+                </div>
+              </div>
+              <div class="top-line__col col-auto">
+                <div class="top-line__text top-line__text--tel">
+                  <div class="top-line__icon-wrap">
+                    <svg class="icon icon-whatsapp ">
+                      <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                    </svg>
+                    <svg class="icon icon-viber ">
+                      <use xlink:href="img/svg/sprite.svg#viber"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="top-line__text-title">Звоните с 9.00 до 18.00
+                    </div><a class="top-line__tel" href="tel:+8(3519)224477">+8 (3519) 22 44 77</a>
+                    <div><a class="top-line__sm-link link-modal d-xl-none" data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке">Заказать звонок</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="top-line__col col-auto d-xl-block d-none"><a class="top-line__btn link-modal" data-src="#modal-call" href="javascript:;" data-order="Заказать звонок в шапке">Заказать звонок</a>
+              </div>
+              <div class="col-xl-auto col-md order-md-first">
+                <div class="row">
+                  <div class="top-line__col col-xl-auto col-sm"><a class="top-line__logo" href="/">
+                    <!-- picture-->
+                    <picture> 
+                      <source srcset="img/@2x/webp/logo.webp" type="image/webp"/>
+                      <!-- /webp images  --><img src="img/@2x/logo.png" alt=""/>
+                    </picture>
+                    <!-- /picture-->
+                    <div class="top-line__logo-text">
+                      <div class="top-line__logo-text-title d-none d-sm-block">«Технология чистоты»
+                      </div>Аренда, обслуживание и&nbsp;замена&nbsp;грязезащитных ковров
+                    </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__foot">
+            <div class="row">
+              <div class="footer__foot-col col-lg-auto"><a class="small text-secondary tdu" href="#" target="__blank">Политика конфиденциальности</a>
+              </div>
+              <div class="footer__foot-col col-lg"><a class="small text-secondary tdu" href="#" target="__blank">Пользовательское соглашение</a>
+              </div>
+              <div class="footer__foot-col col-lg-auto">
+                <div class="footer__develop">
+                  Созданёие и продвижение сайта:  <a class="tdu" href="#" target="_blank">Студия «Барс»</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+    <div class="form-wrap modal-win modal-form" id="modal-call">
+      <form action="thanks.php" method="post">
+        <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+        <input class="utm_source" type="hidden" name="utm_source"/>
+        <input class="utm_term" type="hidden" name="utm_term"/>
+        <div class="row no-gutters">
+          <div class="col-6 section-bg d-none d-lg-block" data-bg="img/@2x/modal-1.jpg"></div>
+          <div class="col">
+            <div class="form-wrap__top-title">Укажите контактные данные 
+              <div class="form-wrap__text form-wrap__text--lg">и&nbsp;удобное время для звонка
+              </div>
+            </div>
+            <div class="form-wrap__text form-wrap__text--sm">Специалист компании позвонит вам прямо сейчас или в&nbsp;другое рабочее время:<br/>мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;17:00
+            </div>
+            <input type="hidden" name="formwithtime" value="formwithtime"/>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input" type="text" placeholder="Иван" name="name" required="required"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Введите Ваш номер телефона для связи</span><input class="form-wrap__input" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <label class="custom-input-time"><input class="custom-input-time__input" type="checkbox" name="scr8-time"/><span class="custom-input-time__lab"></span><span class="custom-input-time__text custom-input-time__text--now"> <span class="d-none d-sm-inline">Позвонить сейчас</span><span class="d-sm-none">Сейчас</span></span><span class="custom-input-time__text custom-input-time__text--time"> <span class="d-none d-sm-inline">Позвонить по времени</span><span class="d-sm-none">По времени</span></span>
+            </label>
+            <div class="toggle-wrap-input-js">
+              <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Например, 10 апреля в 14:00" name="time"/>
+              </div>
+              <!-- +e.input-wrap-->
+            </div>
+            <button class="form-wrap__btn" type="submit">Перезвоните мне 
+            </button>
+            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь  с&nbsp;<a class="tdu text-success" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call-->
+    <div class="modal-win modal-win--sm text-center" id="modal-replacement">
+      <div class="modal-win__title">Вы&nbsp;можете выбрать замену от&nbsp;1&nbsp;до&nbsp;7&nbsp;раз в&nbsp;неделю
+      </div>
+      <div class="modal-win__item row">
+        <div class="modal-win__img-wrap col-auto">
+          <!-- picture-->
+          <picture> 
+            <source srcset="img/@2x/webp/modal-i-1.webp" type="image/webp"/>
+            <!-- /webp images  --><img src="img/@2x/modal-i-1.png" alt=""/>
+          </picture>
+          <!-- /picture-->
+        </div>
+        <div class="col">Если у&nbsp;вас салон, который в&nbsp;день посещает 5-10&nbsp;человек, то&nbsp;достаточно 1&nbsp;замены в&nbsp;неделю.</div>
+      </div>
+      <div class="modal-win__item row">
+        <div class="modal-win__img-wrap col-auto">
+          <!-- picture-->
+          <picture> 
+            <source srcset="img/@2x/webp/modal-i-2.webp" type="image/webp"/>
+            <!-- /webp images  --><img src="img/@2x/modal-i-2.png" alt=""/>
+          </picture>
+          <!-- /picture-->
+        </div>
+        <div class="col">Если гипермаркет, то&nbsp;можно менять <br/>каждый день.</div>
+      </div>
+      <div class="modal-win__item row">
+        <div class="modal-win__img-wrap col-auto">
+          <!-- picture-->
+          <picture> 
+            <source srcset="img/@2x/webp/modal-i-3.webp" type="image/webp"/>
+            <!-- /webp images  --><img src="img/@2x/modal-i-3.png" alt=""/>
+          </picture>
+          <!-- /picture-->
+        </div>
+        <div class="col">Сроки замены прописываем в&nbsp;договоре, а&nbsp;если нужно заменить вне графика&nbsp;&mdash; доставим после звонка на&nbsp;следующий день</div>
+      </div>
+    </div>
+    <!-- #modal-replacement-->
+    <div class="modal-win modal-win--sm text-center" id="modal-clean">
+      <!-- picture-->
+      <picture> 
+        <source srcset="img/@2x/webp/modal-clean-img.webp" type="image/webp" media="(min-width:576px)"/>
+        <source srcset="img/@1x/webp/modal-clean-img.webp" type="image/webp"/>
+        <source srcset="img/@2x/modal-clean-img.jpg" type="image/jpg" media="(min-width:576px)"/>
+        <source srcset="img/@1x/modal-clean-img.jpg" type="image/jpg"/><img src="img/@2x/modal-clean-img.jpg" alt=""/>
+      </picture>
+      <!-- /picture-->
+      <p>Часто говорят: &laquo;Купим ковер и&nbsp;пусть его уборщицы чистят&raquo;. </p>
+      <p>Не&nbsp;получится&nbsp;&mdash; при чистке вручную или даже моющим пылесосом: пятна и&nbsp;сильные загрязнения остаются, а&nbsp;грязь скапливается в&nbsp;нижнем слое покрытия. </p>
+      <p>С&nbsp;каждым разом ковер будет впитывать все меньше грязи. Ту, что не&nbsp;впитает, растащат по&nbsp;полу.</p>
+    </div>
+    <!-- #modal-clean-->
+    <div class="modal-win modal-win--md text-center" id="modal-economy"> 
+      <div class="modal-win__modal-head">
+        <div class="modal-win__title">Экономия за год 27 776 Р
+        </div>
+        <div class="h6 text-secondary">если взять ковер в аренду</div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Ковры в собственности</th>
+            <th>Ковры в аренде</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Стоимость 1&nbsp;ковра, руб.  (нужно 2&nbsp;шт., чтобы менять)</td>
+            <td data-title="Ковры в собственности">8 500&times;2=17&nbsp;000</td>
+            <td data-title="Ковры в аренде">—</td>
+          </tr>
+          <tr>
+            <td>Стирка, руб.</td>
+            <td data-title="Ковры в собственности">250 за&nbsp;1&nbsp;м&sup2; ~ 517</td>
+            <td data-title="Ковры в аренде">—</td>
+          </tr>
+          <tr>
+            <td>Количество стирок</td>
+            <td data-title="Ковры в собственности">4</td>
+            <td data-title="Ковры в аренде">4</td>
+          </tr>
+          <tr>
+            <td>Расходы на&nbsp;содержание ковров в&nbsp;месяц, руб.</td>
+            <td data-title="Ковры в собственности">2 068</td>
+            <td data-title="Ковры в аренде">1 170</td>
+          </tr>
+          <tr>
+            <td>Расходы на&nbsp;содержание ковров в&nbsp;год, руб.</td>
+            <td data-title="Ковры в собственности">24 816</td>
+            <td data-title="Ковры в аренде">14 040</td>
+          </tr>
+          <tr>
+            <td>Итого расходы в год, руб.</td>
+            <td data-title="Ковры в собственности">
+              <div class="modal-win__total">41 816
+              </div>
+            </td>
+            <td data-title="Ковры в аренде">
+              <div class="modal-win__total">14 040
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- #modal-economy-->
+    <!-- #modal-one-click-->
     <!-- modal-->
     <script src="js/lazy.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -414,7 +995,14 @@
 <stop offset="0%"  style="stop-color:#a68aec"/>
 <stop offset="100%"   style="stop-color:#7d20e6"/>
 </linearGradient>
+<linearGradient id="success-gradient"  x1="0%" y1="0%"    x2="0%" y2="100%">
+<stop offset="0%"   stop-color="#8eb930"/>
+<stop offset="100%"  stop-color="#a2d032"/>
+</linearGradient>
 <linearGradient id="primary-gradient" gradientUnits="userSpaceOnUse" x1="165.4035" y1="344.0104" x2="165.4035" y2="397.3238" gradientTransform="matrix(1 0 0 -1 0 504)">
+<stop  offset="0" style="stop-color:#1B8ACA"/>
+<stop  offset="0.4976" style="stop-color:#27A9E5"/>
+<stop  offset="1" style="stop-color:#31C5FC"/>
 </linearGradient>
 </svg>
   </body>

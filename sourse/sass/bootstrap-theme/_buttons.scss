@@ -123,8 +123,13 @@ fieldset:disabled a.btn {
 //   }
 // }
 .btn-icon{
-  padding-right: rem(103);
-  padding-left: rem(40);
+  @include media-breakpoint-up(sm) {
+
+    padding-right: rem(103);
+    padding-left: rem(40);
+  }
+  padding-right: rem(83);
+  padding-left: rem(20);
   overflow: hidden;
   &:hover{
     .btn-icon-wrap{

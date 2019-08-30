@@ -1,9 +1,30 @@
 mixin s-washing()
 	// start s-washing
-	+b.SECTION.s-washing.section.lazy-background#s-washing&attributes(attributes)
+	+b.SECTION.s-washing.section.lazy-background#s-washing.bg-wrap&attributes(attributes)
+		+pic("s-washing-bg","jpg",'bg','lazy',0)(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 s-washing
 				
-			.row
+			+e.text-block
+				h2 
+					strong В каждую замену
+					| 
+					| «новый» ковер
+				+e.text Вместо чистки — стирка:
+				ul
+					li стираем в&nbsp;2&nbsp;этапа, чтобы очистить ворс от&nbsp;грязи и&nbsp;песка до&nbsp;самого основания;
+
+					li очищаем вручную от&nbsp;волос, жвачек и&nbsp;ниток
+
+					li чистые ковры перевозим отдельно от&nbsp;грязных
+				+e.foot 
+					strong Стираем и&nbsp;отжимаем
+					| 
+					| в&nbsp;промышленных стиральных машинах
+				+e.label.link-modal(  data-src="#modal-clean" href="javascript:;")
+					strong
+						span.tdu Только стирка гарантирует,
+					|
+					span.tdu  что ковер 
+						br
+						| в&nbsp;следующую укладку выполнит свои функции на&nbsp;100%
 	// end s-washing

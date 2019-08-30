@@ -3,7 +3,20 @@ mixin s-logos()
 	+b.SECTION.s-logos.section.lazy-background#s-logos&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-logos
-				
-			.row
+				h2 
+					strong Арендой наших ковров пользуются
+					| 
+					| крупные торговые сети, банки,
+				+e.text операторы сотовой связи и&nbsp;другие компании
+			+e.slider--js
+				mixin slide(x)
+					+e.slide
+						+e.item
+							img.res-i(src="#" data-lazy=`img/@2x/${x}`, alt="")
+					// /+e.slide
+				+slide('logo-1.png')
+				+slide('logo-2.png')
+				+slide('logo-3.png')
+				+slide('logo-4.png')
+				+slide('logo-1.png')
 	// end s-logos

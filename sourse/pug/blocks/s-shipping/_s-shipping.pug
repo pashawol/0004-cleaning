@@ -2,8 +2,25 @@ mixin s-shipping()
 	// start s-shipping
 	+b.SECTION.s-shipping.section.lazy-background#s-shipping&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-shipping
-				
 			.row
+				.col.d-none.d-lg-block
+					+pic("shipping-img",'png','','',0)
+				+e.col.col-lg-4
+					+e.text
+						h2
+							strong Доставим завтра! 
+							| 
+							| В&nbsp;будни, в&nbsp;любую погоду
+						p Чтобы проверить, как &laquo;работает&raquo; ковер, позвоните нам и&nbsp;уже завтра ковер будет у&nbsp;вас&nbsp;&mdash; на&nbsp;3&nbsp;дня бесплатно.
+
+						p При желании можете пользоваться ковром дальше, мы&nbsp;заключаем договор&nbsp;&mdash; 
+							|
+							a.link-modal(  data-src="#modal-replacement" href="javascript:;").tdu замена до&nbsp;7&nbsp;раз в&nbsp;неделю	
+								+e.SPAN.icon-wrap
+									+icon("question")
+						<picture class="d-lg-none text-center">  
+							<source srcset="img/@1x/webp/shipping-img.webp" type="image/webp">
+							<source srcset="img/@1x/shipping-img.png" type="image/png"><img src="img/@2x/shipping-img.png" alt="">
+						</picture>
+						+e.btn.scroll-link(href="#s-form") Получить ковер бесплатно
 	// end s-shipping

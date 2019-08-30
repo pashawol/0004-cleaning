@@ -9,57 +9,15 @@ jQuery(document).ready(function ($) {
 	document.createElement("picture");
 	// для свг
 	svg4everybody({}); 
-	JSCCommon.magnificPopupCall();
-
+	 
 	JSCCommon.tabscostume('tabs');
-
-	JSCCommon.mobileMenu();
-
-	JSCCommon.inputMask(); 
-
-	JSCCommon.CustomInputFile(); 
+	JSCCommon.inputMask();  
+	JSCCommon.magnificPopupCall();  
 	// добавляет подложку для pixel perfect
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
  
- 
-	// /закрыть/открыть мобильное меню
-
-	function heightses() {
-
-		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
-		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
-		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
-
-			btnToggle.removeClass("on");
-			// $("body").removeClass("fixed");
-			menu.removeClass("active");
-			$("body").removeClass("fixed");
-		}
-	} 
-
-	$(window).resize(function () {
-		heightses();
-
-	});
- 
-	heightses();
  
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
@@ -77,7 +35,7 @@ jQuery(document).ready(function ($) {
 		arrr2 = (' <div class="l">' + icon);
 	// // карусель
 		// // карусель
-		$('.s-catalog__slider--js').slick({
+		$('.s-logos__slider--js').slick({
 			slidesToShow: 1, 
 			dots: false,
 			speed: 600,
@@ -109,64 +67,7 @@ jQuery(document).ready(function ($) {
 				
 		 ]
 		});
-		$('.s-rew__slider--js').slick({
-			appendArrows: ".control-wrap",
-			slidesToShow: 1, 
-			speed: 600,
-			infinite: true, 
-			mobileFirst: true, 
-			arrows: true,
-			dots: true,
-			prevArrow: arrr2,
-			nextArrow: arrl2, 
-			});
-
-
-			$('.slider-for').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false, 
-				asNavFor: '.slider-nav',
-				mobileFirst: true, 
-				arrows: true,
-				dots: false,
-				prevArrow: arrr2,
-				nextArrow: arrl2, 
-				infinite: true, 
-				mobileFirst: true, 
-			});
-			$('.slider-nav').slick({
-				slidesToShow: 2,
-				slidesToScroll: 1,
-				asNavFor: '.slider-for',
-				dots: false, 
-				arrows: false, 
-				mobileFirst: true, 
-				focusOnSelect: true,
-				infinite: true, 
-				responsive: [
-					{ 
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 6,  
-					}  },
-					
-					{ 
-					breakpoint: 767.98,
-					settings: {
-						slidesToShow: 4, 
-						// infinite: false, 
-					}  },
-					
-					{ 
-					breakpoint: 575.98,
-					settings: {
-						slidesToShow: 3, 
-						// infinite: false, 
-					}  },
-					
-			 ]
-			});
+	 
  
 	$('.custom-input-time__input').change(function(){
 		$(this).parents('form').find('.toggle-wrap-input-js').toggle().toggleClass('active');
@@ -184,27 +85,27 @@ jQuery(document).ready(function ($) {
 		return b;
 	})();
 			// form
-			$("form").submit(function () { //Change
-				var th = $(this);
-				th.find('.utm_source').val(gets['utm_source']);
-				th.find('.utm_term').val(gets['utm_term']);
-				var  valOrder = th.find('.order').val();
-				var  valTime = th.find('[name="time"]').val(); 
-				$.ajax({
-					type: "POST",
-					url: 'action.php', //Change
-					data: th.serialize()
-				}).success(function () { 
+			// $("form").submit(function () { //Change
+			// 	var th = $(this);
+			// 	th.find('.utm_source').val(gets['utm_source']);
+			// 	th.find('.utm_term').val(gets['utm_term']);
+			// 	var  valOrder = th.find('.order').val();
+			// 	var  valTime = th.find('[name="time"]').val(); 
+			// 	$.ajax({
+			// 		type: "POST",
+			// 		url: 'action.php', //Change
+			// 		data: th.serialize()
+			// 	}).success(function () { 
 					
 		 
 
-					setTimeout(function () { 
-						th.trigger("reset"); 
-						// ym(53383120, 'reachGoal', 'zakaz');
-					}, 4000);
-				});
-				return false;
-			});
+			// 		setTimeout(function () { 
+			// 			th.trigger("reset"); 
+			// 			// ym(53383120, 'reachGoal', 'zakaz');
+			// 		}, 4000);
+			// 	});
+			// 	return false;
+			// });
 			// /form
 
 			$(".form-wrap__toggle").click(function(){
@@ -238,61 +139,23 @@ JSCCommon = {
 		})
 		// /modal галерея
 	},
-	// /magnificPopupCall
-	mobileMenu: function () {
-		// закрыть/открыть мобильное меню
-
-		btnToggle.click(function () {
-
-			btnToggle.toggleClass("on");
-			// $("body").toggleClass("fixed");
-			menu.toggleClass("active");
-			$("body, html").toggleClass("fixed");
-			return false;
-		});
-		// $('.menu-mobile--js ul li a').on('click', function () {
-		// 	$(".menu-mobile--js .toggle-mnu").click();
-		// });
-
-		$(document).mouseup(function (e) {
-			var container = $(".menu-mobile--js.active");
-			if (container.has(e.target).length === 0) {
-				btnToggle.removeClass("on");
-				// $("body").toggleClass("fixed");
-				menu.removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		});
-
-	},
-	// /mobileMenu
-
-	// табы  . 
-	tabscostume: function (tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').removeClass('active').hide(function(){
-					$(this).find('input').attr('required', false) })
-				.eq($(this).index()).addClass('active').show(function(){
-					$(this).find('input').attr('required', true) });
-
-		});
-	},
-	// /табы  . 
-
  
-	// /nlineSVG
-	CustomInputFile: function CustomInputFile() {
-		var file = $(".add-file input[type=file]");
-		file.change(function () {
-			var filename = $(this).val().replace(/.*\\/, "");
-			var name = $(".add-file__filename  ");
-			name.text(filename);
+    // табы  .
+    tabscostume: function (tab) {
+			$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+					$(this)
+							.addClass('active').siblings().removeClass('active')
+							.closest('.' + tab).find('.' + tab + '__content').removeClass('active').hide(function () {
+							$(this).find('input').attr('required', false)
+					})
+							.eq($(this).index()).addClass('active').show(function () {
+							$(this).find('input').attr('required', true)
+					});
 
-		});
+			});
 	},
- 
+	// /табы  .
+
 	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
