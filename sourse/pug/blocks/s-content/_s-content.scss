@@ -1,7 +1,9 @@
 .s-content {
 	background-color: #605f63;
 	color: #ffffff;
+	@include media-breakpoint-up(lg) {
 	padding-top: rem(0);
+	}
 	padding-bottom: 0 !important;
 	picture{
 		@include media-breakpoint-up(lg) {

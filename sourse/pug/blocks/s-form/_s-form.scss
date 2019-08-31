@@ -4,11 +4,19 @@
 		padding-bottom: 0;
 		margin-bottom: rem(50);
 	}
+	h2{
+		strong{
+			display: block;
+		}
+	}
 	picture{
 		width: 140%;
 	}
 	.object-fit-js{
-		object-position: bottom;
+		@include media-breakpoint-up(sm){
+			object-position: bottom;
+		}
+		
 	}
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(80);
@@ -20,14 +28,15 @@
 		margin-bottom: 0;
 		padding-bottom: rem(0);
 		@include media-breakpoint-up(lg) {
+			max-width: rem(450);
 			margin-left: 0;
 			text-align: left;
-			max-width: rem(450);
 		}
-		max-width: rem(750);
+		max-width: rem(320);
+		// max-width: rem(750);
 		// text-align: center;
-		margin-left: auto;
-		margin-right: auto;
+		// margin-left: auto;
+		// margin-right: auto;
 		h2{
 			padding-bottom: rem(5);
 		}
