@@ -3,7 +3,10 @@
 		strong{
 			display: inline-block;
 		}
-		padding-bottom: rem(22);
+		@include media-breakpoint-up(md) {
+
+			padding-bottom: rem(22);
+		}
 	}
 	.section-title{
 padding-bottom: rem(8);

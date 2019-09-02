@@ -262,7 +262,10 @@
 
 
 			&__foot-block-right{
-				text-align: left;
+				@include media-breakpoint-up(sm){
+					text-align: left;
+				}
+				text-align: center;
 				position: relative;
 				z-index: 2;
 				@include media-breakpoint-up(lg){
@@ -275,6 +278,7 @@
 						margin-right: -10px;
 						font-weight: 500;
 						color: #757575;
+					
 						strong{
 							font-weight: normal;
 						}

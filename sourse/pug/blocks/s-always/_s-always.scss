@@ -10,16 +10,29 @@ margin-top: rem(-10);
 margin-left: rem(-20);
 	}
 	&__img-wrap{
-		min-height: rem(95);
+		@include media-breakpoint-up(md) {
+
+			min-height: rem(95);
+		}
 		margin-bottom: rem(8);
 		position: relative;
 		z-index: 2;
 		&::after {
-			content: url(../img/@2x/logo-light.png);
+			content: '';
+			background-image: url(../img/@2x/logo-light.png);
 			position: absolute;
 			bottom: rem(-30);
 			left: -.875rem;
 			z-index: -1;
+			@include media-breakpoint-up(md) {
+
+				width: rem(118px);
+				height: rem(118px);
+			}
+			width: rem(118px * .8);
+			height: rem(118px * .8);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
 	}
 	}
 	&__item{

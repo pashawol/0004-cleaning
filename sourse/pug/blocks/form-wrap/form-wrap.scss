@@ -108,9 +108,11 @@
 		 flex-grow: 1;
 		 min-width: 1%;
 	 
-		 display: flex;
-		 align-items: center;
-		 justify-content: center;
+		 display: flex; 
+		 @include media-breakpoint-up(sm) {
+
+			 justify-content: center;
+			}
 		 align-items: center;
 		//  height: rem(56);
 		 position: relative;
@@ -134,6 +136,10 @@
 			 font-size: rem(20);
 			 flex-shrink: 0;
 			 margin-right: rem(8);
+			 &-email{
+				font-size: rem(18);
+
+			 }
 		 }
 	 }
  }

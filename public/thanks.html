@@ -304,7 +304,7 @@
                     <!-- /picture-->
                     <div class="top-line__logo-text">
                       <div class="top-line__logo-text-title d-none d-sm-block">«Технология чистоты»
-                      </div>Аренда, обслуживание и&nbsp;замена грязезащитных&nbsp;ковров
+                      </div>Аренда, обслуживание и&nbsp;замена грязезащитных ковров
                     </div></a>
                   </div>
                 </div>
@@ -361,7 +361,8 @@
             </div>
             <button class="form-wrap__btn" type="submit">Перезвоните мне 
             </button>
-            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих&nbsp;персональных данных и&nbsp;соглашаетесь<a class="tdu text-success" href="privacy-policy.pdf" target="_blank">  с&nbsp; Политикой конфиденциальности</a>
+            <div class="form-wrap__polite text-secondary">
+               Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих&nbsp;персональных данных и&nbsp;соглашаетесь  <a class="tdu text-success" href="privacy-policy.pdf" target="_blank">  с&nbsp; Политикой конфиденциальности</a>
             </div>
           </div>
         </div>
