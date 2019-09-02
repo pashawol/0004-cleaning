@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.inputMask();  
 	JSCCommon.magnificPopupCall();  
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
  
