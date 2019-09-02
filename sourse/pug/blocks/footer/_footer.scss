@@ -4,8 +4,8 @@
   padding-bottom: rem(20);
    .top-line{
     color: #1f1f1f;
-    padding-top: rem(60);
-    margin-bottom: rem(10);
+    padding-top: rem(40);
+    margin-bottom: rem(5);
     &__tel,
     &__logo{
       
@@ -21,6 +21,11 @@
   }
   &__foot{
     font-size: $small;
+    @include media-breakpoint-up(xl) {
+      .row{
+        @include roww(30);
+      }
+    }
     @include media-breakpoint-up(lg) {
       text-align: left;
     }
@@ -41,7 +46,9 @@
     padding-bottom: rem(10);
   }
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+  
+}
 
 @include media-breakpoint-up(lg) {}
 

@@ -94,6 +94,7 @@
 			margin-left: rem(170);
 		}
 		@include media-breakpoint-up(sm) {
+			// top: 0;
 			margin-left: 0;
 			position: absolute;
 			margin-top: 0;
@@ -103,7 +104,7 @@
 		margin-top: rem(30);
 		margin-left: auto;
 		margin-right: auto;
-		top: rem(10);
+		top: rem(5);
 		display: block;
 		padding: rem(30) rem(10);
 		text-align: center;

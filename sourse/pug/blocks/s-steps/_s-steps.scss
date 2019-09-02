@@ -90,6 +90,11 @@
 			&__title{
 				@extend h5;
 				font-weight: bold;
+				strong{
+					@extend h5;
+					font-style: italic;
+					// font-size: rem(30);
+				}
 				&--foot{
 					margin-left: auto;
 					margin-right: auto;
@@ -147,6 +152,11 @@
 					margin-left: 0;
 					margin-top: 0;
 				}	
+				strong{
+					@extend h5;
+					margin-top: rem(3);
+					display: block;
+				}
 				margin-top: rem(60);
 				margin-left: auto;
 				margin-right: auto;
@@ -271,7 +281,7 @@
 			}
 	@include media-breakpoint-up(xl) {
 		padding-top: rem(85);
-		padding-bottom: rem(60);
+		padding-bottom: rem(55);
 	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
