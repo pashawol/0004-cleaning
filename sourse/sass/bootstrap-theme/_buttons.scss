@@ -16,6 +16,7 @@
   position: relative;
   z-index: 2; 
   font-weight: bold;
+  // letter-spacing: rem(0.75px);
   &::after,
   &:before{
     content: '';
@@ -125,8 +126,8 @@ fieldset:disabled a.btn {
 .btn-icon{
   @include media-breakpoint-up(sm) {
 
-    padding-right: rem(103);
-    padding-left: rem(40);
+    padding-right: rem(101);
+    padding-left: rem(42);
   }
   padding-right: rem(83);
   padding-left: rem(20);
@@ -150,7 +151,11 @@ fieldset:disabled a.btn {
   right: 0;
   height: 100%;
   text-align: center;
-  width: rem(80);
+  @include media-breakpoint-up(sm) {
+
+    width: rem(80);
+  }
+  width: rem(70);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,7 +246,8 @@ fieldset:disabled a.btn {
 // }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm); 
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm * .5, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm); 
+  letter-spacing: rem(1.04px);
 }
 
 

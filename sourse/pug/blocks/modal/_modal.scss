@@ -11,6 +11,13 @@
 	align-items: center;
 }
 .modal-win {
+	&__table-text{
+		@include media-breakpoint-up(sm){
+
+			max-width: rem(230);
+			font-size: 1rem;
+		}
+	}
 	background-color: #fafafa;
 	&.form-wrap{
 		.col{
@@ -198,23 +205,28 @@
 			font-weight: normal;
 		}
 	}
+	.h6.text-secondary{
+		font-weight: 500;
+		color: #4e4e4e !important;
+	}
 	table{
 		text-align: left;
 		font-weight: normal;
 		width: 100%;
-		margin-bottom: rem(30);
-		tr{
-			&:nth-child(even){
+		margin-bottom: rem(70);
+		tbody	tr{
+			&:nth-child(odd){
 				background-color: #f5f5f5;
 			}
 		}
 		th{
-			@extend .h6;
-			color: $secondary;
-			font-weight: normal;
+			color: #8c8c8c;
 		}
 		th,
 		td{
+			@extend .h6;
+			font-weight: 500;
+			letter-spacing: rem(0.27px);
 			@include media-breakpoint-up(sm){
 
 				height: rem(70);
@@ -234,10 +246,18 @@
 			tr{
 
 				display: block;
+				padding-bottom: rem(5);
 			}
 			td{
 				display: block;
 				width: 100%;
+				margin-bottom: 0;
+				text-align: right;
+				padding: rem(10) rem(10);
+				font-size: 1rem !important;
+				&:first-child{
+					text-align: left;
+				}
 				&:nth-child(1){
 					width: 100%;
 					font-size: rem(18);
@@ -250,6 +270,7 @@
 					align-items: center;
 					&::before{
 						content: attr(data-title);
+						text-align: left;
 					}
 				}
 			}

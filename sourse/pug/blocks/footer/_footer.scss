@@ -4,8 +4,24 @@
   padding-bottom: rem(20);
    .top-line{
     color: #1f1f1f;
-    padding-top: rem(40);
-    margin-bottom: rem(5);
+    padding-top: rem(55);
+    margin-bottom: rem(15);
+    &__text--tel{
+      margin-right: 20px;
+    }
+    &__logo{
+      @include media-breakpoint-up(lg){
+
+        max-width: rem(340);
+      }
+    }
+    &__logo-text{ 
+      // font-size: 1rem;
+      &-title{
+      //  margin-bottom: 0;
+        // margin-bottom: 0;
+      }
+    }
     &__tel,
     &__logo{
       
@@ -21,6 +37,7 @@
   }
   &__foot{
     font-size: $small;
+    font-weight: 500;
     @include media-breakpoint-up(xl) {
       .row{
         @include roww(30);
@@ -31,6 +48,7 @@
     }
     text-align: center;
     a{
+      font-weight: 500;
       border-bottom: 1px solid;
     }
   }

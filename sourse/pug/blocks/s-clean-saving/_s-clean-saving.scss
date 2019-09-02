@@ -6,11 +6,11 @@
 		padding-bottom: rem(22);
 	}
 	.section-title{
-padding-bottom: rem(1);
+padding-bottom: rem(8);
 		&__icon-wrap{
 			display: inline-block;
-			width: em(19.49px);
-			height: em(19.49px);
+			width: em(16px);
+			height: em(16px);
 			border-radius: 50%;
 			background-color: #bbe47c;
 			color: #ffffff;
@@ -23,28 +23,7 @@ padding-bottom: rem(1);
 			}
 		}
 	}
-	&__item{
-		max-width: rem(323px);
-		height: rem(192px);
-		box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
-		border-radius: 5px;
-		background-color: #ffffff;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
-		z-index: 2;
-		text-align: center;
-		&::before{
-			content: '';
-			position: absolute;
-			@include a-cent;
-			z-index: -1;
-			border-radius: 3px;
-			border: 1px dashed #dddddd;
-			width: calc(100% - 6px);
-			height: calc(100% - 6px);
-		}
-	}
+ 
 	&__img-wrap{
 		width: rem(92px);
 		height: rem(92px);
@@ -63,17 +42,41 @@ padding-bottom: rem(1);
 		}
 	}
 	&__item{
+		max-width: rem(323px);
+		height: rem(192px);
+		&--last{
+			height: rem(142px);
+
+		}
+		box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
+		border-radius: 5px;
+		background-color: #ffffff;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		&::before{
+			content: '';
+			position: absolute;
+			@include a-cent;
+			z-index: -1;
+			border-radius: 3px;
+			border: 1px dashed #dddddd;
+			width: calc(100% - 12px);
+			height: calc(100% - 12px);
+		}
 		@extend .h5;
 		font-weight: 300;
-		margin-bottom: rem(70);
-		padding-left: rem(25);
-		padding-right: rem(25);
+		margin-bottom: rem(77);
+		padding-left: rem(38);
+		padding-right: rem(38);
 		line-height: 1.4;
 		position: relative;
 		z-index: 3;
 	}
 	&__text{
-		margin-top: rem(-26);
+		margin-top: rem(-24);
 		a{
 			@extend .text-body;
 			text-decoration: none !important;
@@ -119,6 +122,10 @@ padding-bottom: rem(1);
 	position: relative;
 	font-weight: 500;
 	color: #757575;
+	@include media-breakpoint-up(sm) {
+
+		padding-top: rem(48);
+	}
 	z-index: 2;
 	&::before{
 		content: '';
@@ -128,7 +135,7 @@ padding-bottom: rem(1);
 			width: rem(963px);
 			height: rem(806px);
 			left: rem(-80);
-			top: rem(-300);
+			top: rem(-265);
 			transform: translate(0);
 			// margin-left: 0;
 
@@ -156,15 +163,16 @@ padding-bottom: rem(1);
 	display: block;
 	text-decoration: none !important;
 	padding: rem(10);
+	// margin-left: rem(20);
 	text-align: center;
 	@include media-breakpoint-up(sm) {
 
-		margin-top: rem(15);
-		margin-left: rem(60);
+		// margin-top: rem(75);
+		margin-left: rem(62);
 	}
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: rem(35);
+	padding-top: rem(25);
 	z-index: 2;
 }
 &__label{
@@ -198,16 +206,72 @@ margin-bottom: rem(10);
 	max-width: rem(280);
 	text-align: center;
 	margin-left: auto;
+	font-weight: 500;
 	@include media-breakpoint-up(lg) {
 		
-		margin-top: rem(150);
-		margin-right: rem(70);
+		margin-top: rem(142);
+		margin-right: rem(65);
 	}
 	margin-top: rem(180);
 }
 	@include media-breakpoint-up(xl) {
-		padding-top: rem(85);
+		padding-top: rem(80);
 		padding-bottom: rem(75);
+	}
+
+	&__row{
+		position: relative;
+		@include media-breakpoint-up(md) {
+
+			&::before{
+				content: '';
+				width: 4px;
+				height: calc(100% - #{rem(220)}) ;
+				top: rem(110);
+				@include a-cent(x);
+				background-color: #f8f8f8;
+				position: absolute;
+			}
+			&::after{
+				content: '';
+				width: calc(100% - #{rem(320)}) ;
+				height:  4px;
+				top: rem(435);
+				@include a-cent(x);
+				background-color: #f8f8f8; 
+			}
+		}
+		
+	}
+	&__logo{
+		@include media-breakpoint-up(lg) {
+
+			&::after{
+				content: '';
+				width: 40px ;
+				height:  4px;
+				top: rem(435);
+				position: absolute;
+				left: 50%;
+				margin-left: 45px;
+				z-index: 4;
+				background-color: #f8f8f8; 
+			}
+		}
+		@include media-breakpoint-up(md) {
+
+			&::before{
+				content: '';
+				width: rem(118px);
+				height: rem(118px);
+				@include bg("logo-light.jpg");
+				@include a-cent(x);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				z-index: 3;
+				top: rem(370);
+			}
+		}
 	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

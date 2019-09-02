@@ -20,7 +20,7 @@ h1, .h1 {
 }
 h2, .h2 {
   @include title();
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xxl) {
     font-size: $h2-font-size;
   }
   @include font-size($h2-font-size * .85); 

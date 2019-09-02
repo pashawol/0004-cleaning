@@ -159,7 +159,7 @@
                     </div>
                     <div class="top-line__logo-text">
                       <div class="top-line__logo-text-title d-none d-sm-block">«Технология чистоты»
-                      </div>Аренда, обслуживание и&nbsp;замена&nbsp;грязезащитных ковров
+                      </div>Аренда, обслуживание и&nbsp;замена грязезащитных&nbsp;ковров
                     </div></a>
                   </div>
                 </div>
@@ -304,7 +304,7 @@
                     <!-- /picture-->
                     <div class="top-line__logo-text">
                       <div class="top-line__logo-text-title d-none d-sm-block">«Технология чистоты»
-                      </div>Аренда, обслуживание и&nbsp;замена&nbsp;грязезащитных ковров
+                      </div>Аренда, обслуживание и&nbsp;замена грязезащитных&nbsp;ковров
                     </div></a>
                   </div>
                 </div>
@@ -348,7 +348,7 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap">
-              <label><span class="form-wrap__title">Введите Ваш номер телефона для связи</span><input class="form-wrap__input" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+              <label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
               </label>
             </div>
             <!-- +e.input-wrap-->
@@ -361,7 +361,7 @@
             </div>
             <button class="form-wrap__btn" type="submit">Перезвоните мне 
             </button>
-            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь  с&nbsp;<a class="tdu text-success" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+            <div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих&nbsp;персональных данных и&nbsp;соглашаетесь<a class="tdu text-success" href="privacy-policy.pdf" target="_blank">  с&nbsp; Политикой конфиденциальности</a>
             </div>
           </div>
         </div>
@@ -436,7 +436,10 @@
         </thead>
         <tbody>
           <tr>
-            <td>Стоимость 1&nbsp;ковра, руб.  (нужно 2&nbsp;шт., чтобы менять)</td>
+            <td> 
+              <div class="modal-win__table-text">Стоимость 1&nbsp;ковра, руб.  (нужно 2&nbsp;шт., чтобы менять)
+              </div>
+            </td>
             <td data-title="Ковры в собственности">8 500&times;2=17&nbsp;000</td>
             <td data-title="Ковры в аренде">—</td>
           </tr>

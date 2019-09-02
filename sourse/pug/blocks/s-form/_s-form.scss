@@ -40,6 +40,13 @@
 		h2{
 			padding-bottom: rem(5);
 		}
+ 
+			&__text{
+				line-height: 1.39;
+				@include rfs(rem(23));
+				font-weight: 300;
+				// padding-top: rem(5);
+			 } 
 	}
 	&__text{
 		@extend .h5;
@@ -76,6 +83,15 @@
 		margin-right: auto;
 		box-shadow: 0 2px $h4-font-size 7px rgba(48, 48, 48, 0.05);
 border-radius: 5px;
+&__small-text{
+	padding-top: rem(7);
+}
+&__input-wrap{
+	margin-bottom: rem(26);
+}
+&__btn{
+	margin-top: rem(35);
+}
 @include media-breakpoint-down(xs) {
 	margin-bottom: rem(-5);
 }
@@ -86,8 +102,8 @@ border-radius: 5px;
 			z-index: -1;
 			border-radius: 3px;
 			border: 1px dashed #dddddd;
-			width: calc(100% - 6px);
-			height: calc(100% - 6px);
+			width: calc(100% - 12px);
+			height: calc(100% - 12px);
 		}
 		@include media-breakpoint-up(lg) {
 
@@ -98,7 +114,7 @@ border-radius: 5px;
 		}
 		
 				@include media-breakpoint-up(sm) {
-					padding: rem(55) rem(43) rem(60);
+					padding: rem(50) rem(43) rem(56);
 					 
 		
 					transform: translateX(-5px);

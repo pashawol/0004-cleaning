@@ -20,7 +20,7 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #333333 !default;
+$gray-900: #010101 !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -86,8 +86,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
-  // xxl: 1400px
+  xl: 1200px,
+  xxl: 1400px
 ) !default; 
 
 // Grid containers

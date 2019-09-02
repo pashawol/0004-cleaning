@@ -18,49 +18,7 @@ mixin modal()
 				+e.btn(type='submit') Перезвоните мне 
 				+polite
 	// #modal-call
-	
-	//- +form-wrap()(id="modal-order" class="  modal-win modal-form" )
-	//- 	.row.no-gutters
-	//- 		.col-6.section-bg.d-none.d-lg-block(data-bg="img/@2x/modal-2.jpg")
-	//- 		.col
-	//- 			+e.top-title Укажите контактные данные 
-	//- 				+e.text--lg и&nbsp;удобное время для звонка
-	//- 			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
-	//- 			+e.text--sm Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-				 
-	//- 			input(type="hidden" class='order' name='order' value="")
-	//- 			input(type="hidden" class='color' name='color' value="") 
-	//- 			+inputName()
-	//- 			+form-tabs-modal()
-	//- 			.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-	//- 			+e.toggle 
-	//- 				span Напишите, что вам нужно, если хотите
-	//- 			+e.toggle-block
-	//- 				+input("Текст сообщения","textarea",'',"comment")(required)
-	//- 			+e.btn(type='submit') Обсудить заказ
-	//- 			+polite
-	//- // #modal-order
-	//- +b.modal-win--tech(id="modal-tech" class="text-center" )
-	//- 	.h3 Соблюдаем технологию
-	//- 		br
-	//- 		| производства и хранения
-	//- 	.row.no-gutters
-	//- 		mixin item(i,t,p)
-	//- 			+e.col-tech.col-md-4
-	//- 				+e.item
-	//- 					+pic('storage-'+ i,'png','','')
-	//- 					+e.title= t
-	//- 					p= p
-	//- 		+item("1",'Строго соблюдаем пропорции материалов','чтобы получить шлакоблок с характеристиками, нужными при строительстве любых сооружений')
-	//- 		+item("2",'Пропариваем горячим паром при температуре 70-95°C —','шлакоблок достигает до 90% марочной прочности уже через сутки')
-	//- 		+item("3",'Храним шлакоблок на транспортных поддонах,','чтобы он не соприкасался с землей')
-	//- 	+e.foot
-	//- 		.row
-	//- 			.col-auto
-	//- 				+icon('info')
-	//- 			.h6.text-left.col Как правило, заказчику отгружаем шлакоблок со&nbsp;100% марочной прочностью, которому больше 28&nbsp;суток. При срочных заказах возможна отгрузка блока через неделю после изготовления&nbsp;&mdash; на&nbsp;качество стройки это не&nbsp;влияет
-
-	//- // #modal-tech
+	 
 
 
 	+b.modal-win--sm(id="modal-replacement" class="text-center" )
@@ -105,7 +63,8 @@ mixin modal()
 			tbody
 
 				tr
-					td Стоимость 1&nbsp;ковра, руб.  (нужно 2&nbsp;шт., чтобы менять)
+					td 
+						+e.table-text Стоимость 1&nbsp;ковра, руб.  (нужно 2&nbsp;шт., чтобы менять)
 					td(data-title="Ковры в собственности") 8 500&times;2=17&nbsp;000
 					td(data-title="Ковры в аренде") —
 				

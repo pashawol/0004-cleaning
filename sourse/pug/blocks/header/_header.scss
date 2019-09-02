@@ -3,7 +3,7 @@
 }
 .header{
   background-color: #2a2624;
-  img{
+  .picture-bg img{
     @include media-breakpoint-up(sm) {
 
       object-position: top left;

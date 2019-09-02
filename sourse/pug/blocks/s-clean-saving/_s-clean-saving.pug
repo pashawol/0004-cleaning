@@ -10,9 +10,11 @@ mixin s-clean-saving()
 					| 
 					|  экономия
 				
-			.row
+			+e.row.row
+				+e.logo
+					
 				mixin item(i)
-					+e.item
+					+e.item&attributes(attributes)
 						+e.img-wrap
 							+icon('clean-'+ i)
 						block
@@ -34,7 +36,7 @@ mixin s-clean-saving()
 							|
 							| на&nbsp;моющие средства 
 							br
-							| на&nbsp;
+							| на&nbsp; 
 							strong  14%
 					 
 					+item("3")
@@ -58,15 +60,21 @@ mixin s-clean-saving()
 					+item("4")
 						+e.text Чем 
 							|
-							strong   больше замен в&nbsp;месяц, 
+							strong   больше замен
+							br
+							| в&nbsp;месяц, 
+							
 							| 
 							| тем
 							|
 							| 
-							strong  ниже цена 
+							strong  ниже 
+								br
+								| 
+								| цена 
 							| 
 							| одной
-					+item("5")
+					+item("5")(class="s-clean-saving__item--last")
 						+e.text 
 							strong Доставка&nbsp;&mdash; бесплатно
 					+e.block-pdf

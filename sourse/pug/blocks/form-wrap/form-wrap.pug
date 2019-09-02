@@ -33,19 +33,19 @@ mixin select(label,name= t)
 
 mixin inputName()
 	+input("Иван","text",'Как к вам обращаться?',"name")(required)
-mixin order-block(btn="Обсудить заказ")
-	input(type="hidden" class='order' name='order' value="")
-	input(type="hidden" class='color' name='color' value="") 
-	block
-	+inputName()
-	+form-tabs-modal()
-	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
-	+e.toggle 
-		span Напишите, что вам нужно, если хотите
-	+e.toggle-block
-		+input("Текст сообщения","textarea",'',"comment")
-	+e.btn(type='submit')= btn
-	+polite
+//- mixin order-block(btn="Обсудить заказ")
+//- 	input(type="hidden" class='order' name='order' value="")
+//- 	input(type="hidden" class='color' name='color' value="") 
+//- 	block
+//- 	+inputName()
+//- 	+form-tabs-modal()
+//- 	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+//- 	+e.toggle 
+//- 		span Напишите, что вам нужно, если хотите
+//- 	+e.toggle-block
+//- 		+input("Текст сообщения","textarea",'',"comment")
+//- 	+e.btn(type='submit')= btn
+//- 	+polite
 
 mixin form-tabs()
 	.tabs
@@ -176,13 +176,13 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite.text-secondary  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь  с&nbsp;
-		a(href="privacy-policy.pdf" target="_blank").tdu.text-success Политикой конфиденциальности
+	+e.polite.text-secondary  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих&nbsp;персональных данных и&nbsp;соглашаетесь
+		a(href="privacy-policy.pdf" target="_blank").tdu.text-success   с&nbsp; Политикой конфиденциальности
 
 
 mixin form-body()
 	
-	+input("Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')(required)
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
 	//- +e.title  Выберите время для звонка
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )

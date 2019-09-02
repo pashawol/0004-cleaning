@@ -11,19 +11,19 @@ mixin s-steps()
 			.row.justify-content-between
 				mixin item(i)
 					+e.col.col-md-4
-						+e.item
+						+e.item&attributes(attributes)
 							+pic('steps-'+ i,'png')
 							block
-				+item("1") 
+				+item("1")(class="s-steps__item--1") 
 					+e.text--item.h6 Доставляем ковер в&nbsp;согласованное время, с&nbsp;8&nbsp;до&nbsp;16&nbsp;часов, &mdash;
 						| 
 						strong сворачиваем грязный и&nbsp;стелим чистый за&nbsp;1&nbsp;минуту
-				+item("2") 
+				+item("2")(class="s-steps__item--2") 
 					+e.text--item.h6
 						strong Подписываем акт приема -передачи 
 						| 
 						| у&nbsp;любого сотрудника компании: охранника, кассира, консьержа
-				+item("3")
+				+item("3")(class="s-steps__item--3")
 					+e.text--item.h6
 						strong В&nbsp;конце месяца
 						| 

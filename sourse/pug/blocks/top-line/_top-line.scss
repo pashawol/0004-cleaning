@@ -94,6 +94,7 @@ padding-top: rem(20);
 			font-weight: bold;
 			font-style: italic;
 			@extend h6;
+			// margin-bottom: 0;
 		}
 		display: block;
 		@include media-breakpoint-down(xs) {
@@ -109,8 +110,13 @@ padding-top: rem(20);
 		min-width: rem(150);
 		@extend .h6;
 		font-weight: 500;
+		padding-top: rem(5);
+		img{
+			margin-top: rem(8);
+		}
 		&--tel{
 			@extend .h5;
+			margin-right: rem(5);
 		}
 		&-title{
 			font-size: 1rem;
