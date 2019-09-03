@@ -14,11 +14,11 @@ $.gulp.task('cleanimg', function() {
 			.pipe($.gp.responsive({
 				'*': [{
 					// Produce @2x images
-					width: '100%', quality: 75,   progressive: true, rename: { prefix: '@2x/', },
+					width: '100%', quality: 100,   progressive: true, rename: { prefix: '@2x/', },
 				},
 				 {
 					// Produce @1x images
-					width: '70%', quality: 85, progressive: true,  rename: { prefix: '@1x/', }
+					width: '70%', quality: 100, progressive: true,  rename: { prefix: '@1x/', }
 				},
 				
 				//  {
@@ -26,13 +26,13 @@ $.gulp.task('cleanimg', function() {
 				// 	width: '25%', quality: 75, progressive: true,  rename: { prefix: '@0.5x/', }
 				// },
 	
-					{ 	width: '100%',quality: 75, progressive: true,  rename: { prefix: '@2x/webp/', extname: '.webp', 	},
+					{ 	width: '100%',quality: 100, progressive: true,  rename: { prefix: '@2x/webp/', extname: '.webp', 	},
 					},
 					
-					{ 	width: '70%',quality: 85, progressive: true,  rename: {  prefix: '@1x/webp/',  extname: '.webp', 	},
+					{ 	width: '70%',quality: 100, progressive: true,  rename: {  prefix: '@1x/webp/',  extname: '.webp', 	},
 					} ,
 					
-					// { 	width: '25%',quality: 75, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
+					// { 	width: '25%',quality: 100, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
 					// } ,
 	
 					
