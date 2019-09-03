@@ -27,10 +27,11 @@ html {
 	@include media-breakpoint-up(xl) {	
 		font-size: $em-base;
 	}
+	// font-size: $em-base;
 
 	@include media-breakpoint-up(md) {
+		font-size: 14px;
 	}
-	font-size: 14px;
 	// font-size: 12px;
 	// @include font-size(1rem);
 }

@@ -12,7 +12,7 @@ mixin s-steps()
 				mixin item(i)
 					+e.col.col-md-4
 						+e.item&attributes(attributes)
-							+pic('steps-'+ i,'png')
+							+pic('steps-'+ i,'png','','lazy',0)
 							block
 				+item("1")(class="s-steps__item--1") 
 					+e.text--item.h6 Доставляем ковер в&nbsp;согласованное время, с&nbsp;8&nbsp;до&nbsp;16&nbsp;часов, &mdash;

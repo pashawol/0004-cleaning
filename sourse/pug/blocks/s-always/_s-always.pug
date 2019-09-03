@@ -13,7 +13,7 @@ mixin s-always()
 				mixin item(i)
 					+e.item&attributes(attributes)
 						+e.img-wrap
-							+pic('s-always-img-' + i,'png','',0)
+							+pic('s-always-img-' + i,'png','','lazy',0)
 						block
 				.col-lg-3.col-md-4
 					+item('1')(class="s-always__item--1")
