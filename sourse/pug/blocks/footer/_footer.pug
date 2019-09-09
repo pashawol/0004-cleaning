@@ -16,8 +16,10 @@ mixin footer()
 						+e.col.col-auto
 							+e.text--tel
 								+e.icon-wrap
-									+icon("whatsapp")
-									+icon("viber")
+									a(href="https://wa.me/89630970990")
+										+icon("whatsapp")
+									a(href="viber://chat?number=89630970990")
+										+icon("viber")
 								div
 									+e.text-title Звоните с 9.00 до 18.00
 									+e.tel(href="tel:+8(3519)224477") +8 (3519) 22 44 77
@@ -42,4 +44,5 @@ mixin footer()
 					+e.foot-col.col-lg-auto
 						+e.develop Созданёие и продвижение сайта: 
 							| 
-							a.tdu(href="#" target="_blank") Студия «Барс»
+							a.tdu(href="https://studiobars.ru" target="_blank") Студия «Барс»
+

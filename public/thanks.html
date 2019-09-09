@@ -3,11 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Спасибо</title>
-    <meta name="description" content="о чем страница">
+    <meta name="description" content="Грязезащитные коврики для входной зоны офисов, торговых центров и других помещений">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="yandex-verification" content="83de678fce4b9ad4">
+    <meta name="keywords" content="влаго грязезащитные коврики, грязезащитные коврики, грязезащитные коврики +для входа, грязезащитный ворсовой ковер, грязезащитный ковер, грязезащитный ковер аренда, грязезащитный коврик аренда, грязезащитный коврик купить, грязезащитный покрытие, замена грязезащитных , ковриков, ковер грязезащитный ворсовый, коврик влаговпитывающий, коврик влаговпитывающий грязезащитный, коврик ворсовый влаго грязезащитный, коврик ворсовый грязезащитный, коврик входной влаго грязезащитный, коврик входной ворсовый влаго грязезащитный, коврик входной грязезащитный, коврик входной грязезащитный ворсовый, коврик грязезащитный +на резиновой основе, коврик грязезащитный +на резиновой основе купить, коврик грязезащитный цена, коврик придверный грязезащитный, коврик резиновый грязезащитный, резиновые грязезащитные коврики купить, резиновый коврик придверный грязезащитный">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no">
-    <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" type="image/png" href="img/@2x/logo.png">
+    <!-- Open Graph properties-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Технология чистоты">
+    <meta property="og:title" content="Технология чистоты, аренда, обслуживание и замена грязезащитных ковров в Магнитогорске">
+    <meta property="og:description" content="Грязезащитные коврики для входной зоны офисов, торговых центров и других помещений">
+    <meta property="og:url" content="https://kovrikmag.ru/">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="files/og.jpg">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#30b6ed">
     <link rel="stylesheet" href="css/main.min.css">
@@ -26,9 +38,11 @@
     			$mail->CharSet = 'utf-8';
     
     	///от кого письмо
-    			$mail->setFrom('info@info.com');
+    			$mail->setFrom('info@kovrikmag.ru');
     
-    			$mail->addAddress('wol1414@gmail.com');
+    			$mail->addAddress('spike.mgn@gmail.com');
+    
+    			 
     	//  $mail->addAddress('spike.mgn@gmail.com');
     			// $mail->addAddress('horenkova369@gmail.com');
     	// $mail->addAddress('stab@inbox.support');
@@ -182,13 +196,13 @@
               </div>
               <div class="top-line__col col-auto">
                 <div class="top-line__text top-line__text--tel">
-                  <div class="top-line__icon-wrap">
-                    <svg class="icon icon-whatsapp ">
-                      <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-                    </svg>
-                    <svg class="icon icon-viber ">
-                      <use xlink:href="img/svg/sprite.svg#viber"></use>
-                    </svg>
+                  <div class="top-line__icon-wrap"><a href="https://wa.me/89630970990">
+                      <svg class="icon icon-whatsapp ">
+                        <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                      </svg></a><a href="viber://chat?number=89630970990">
+                      <svg class="icon icon-viber ">
+                        <use xlink:href="img/svg/sprite.svg#viber"></use>
+                      </svg></a>
                   </div>
                   <div>
                     <div class="top-line__text-title">Звоните с 9.00 до 18.00
@@ -275,13 +289,13 @@
               </div>
               <div class="top-line__col col-auto">
                 <div class="top-line__text top-line__text--tel">
-                  <div class="top-line__icon-wrap">
-                    <svg class="icon icon-whatsapp ">
-                      <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-                    </svg>
-                    <svg class="icon icon-viber ">
-                      <use xlink:href="img/svg/sprite.svg#viber"></use>
-                    </svg>
+                  <div class="top-line__icon-wrap"><a href="https://wa.me/89630970990">
+                      <svg class="icon icon-whatsapp ">
+                        <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+                      </svg></a><a href="viber://chat?number=89630970990">
+                      <svg class="icon icon-viber ">
+                        <use xlink:href="img/svg/sprite.svg#viber"></use>
+                      </svg></a>
                   </div>
                   <div>
                     <div class="top-line__text-title">Звоните с 9.00 до 18.00
@@ -319,7 +333,7 @@
               </div>
               <div class="footer__foot-col col-lg-auto">
                 <div class="footer__develop">
-                  Созданёие и продвижение сайта:  <a class="tdu" href="#" target="_blank">Студия «Барс»</a>
+                  Созданёие и продвижение сайта:  <a class="tdu" href="https://studiobars.ru" target="_blank">Студия «Барс»</a>
                 </div>
               </div>
             </div>

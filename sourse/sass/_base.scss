@@ -165,7 +165,7 @@ body {
 }
 
 
-.main-wrapper {position: relative;overflow: hidden;height: 100%;}
+.main-wrapper {position: relative;overflow: hidden;min-height: 100%;}
 
 .slick-slide img {
 	display: inline
