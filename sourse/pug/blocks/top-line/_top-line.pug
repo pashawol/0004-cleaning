@@ -22,11 +22,8 @@ mixin top-line()
 							| г.&nbsp;Магнитогорск,
 				+e.col.col-auto
 					+e.text--tel
-						+e.icon-wrap
-							a(href="https://wa.me/89630970990")
-								+icon("whatsapp")
-							a(href="viber://chat?number=89630970990")
-								+icon("viber")
+						// перенес в mixin-wrap/mixin-wrap.pug
+						+chat-link()
 						div
 							+e.text-title Звоните с 9.00 до 18.00
 							+e.tel(href="tel:+8(3519)224477") +8 (3519) 22 44 77

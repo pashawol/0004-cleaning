@@ -41,9 +41,7 @@
     			$mail->setFrom('info@kovrikmag.ru');
     
     			$mail->addAddress('spike.mgn@gmail.com');
-    
-    			 
-    	//  $mail->addAddress('spike.mgn@gmail.com');
+    			$mail->addAddress('sd224477@mail.ru');
     			// $mail->addAddress('horenkova369@gmail.com');
     	// $mail->addAddress('stab@inbox.support');
     
@@ -67,10 +65,22 @@
     					$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
     			}
     
+    			 
     			if (!empty($_POST['tel'])) {
-    					$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
-    			}
-    
+    							$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
+    					}
+    					
+    					if (!empty($_POST['email'])) {
+    							$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
+    					}
+    					
+    					if (!empty($_POST['whatsapp'])) {
+    							$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Whatsapp:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['whatsapp'] . '</b></td></tr>';
+    					}
+    					
+    					if (!empty($_POST['viber'])) {
+    							$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
+    					}
     			if (!empty($_POST['time'])) {
     					$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
     			}
@@ -196,10 +206,11 @@
               </div>
               <div class="top-line__col col-auto">
                 <div class="top-line__text top-line__text--tel">
-                  <div class="top-line__icon-wrap"><a href="https://wa.me/89630970990">
+                  <!-- перенес в mixin-wrap/mixin-wrap.pug-->
+                  <div class="top-line__icon-wrap"><a target="_blank" href="https://wa.me/+375447659832">
                       <svg class="icon icon-whatsapp ">
                         <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-                      </svg></a><a href="viber://chat?number=89630970990">
+                      </svg></a><a class="viber-link" href="viber://add?number=+375447659832" data-desktop="viber://chat?number=+375447659832">
                       <svg class="icon icon-viber ">
                         <use xlink:href="img/svg/sprite.svg#viber"></use>
                       </svg></a>
@@ -289,10 +300,11 @@
               </div>
               <div class="top-line__col col-auto">
                 <div class="top-line__text top-line__text--tel">
-                  <div class="top-line__icon-wrap"><a href="https://wa.me/89630970990">
+                  <!-- перенес в mixin-wrap/mixin-wrap.pug-->
+                  <div class="top-line__icon-wrap"><a target="_blank" href="https://wa.me/+375447659832">
                       <svg class="icon icon-whatsapp ">
                         <use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-                      </svg></a><a href="viber://chat?number=89630970990">
+                      </svg></a><a class="viber-link" href="viber://add?number=+375447659832" data-desktop="viber://chat?number=+375447659832">
                       <svg class="icon icon-viber ">
                         <use xlink:href="img/svg/sprite.svg#viber"></use>
                       </svg></a>

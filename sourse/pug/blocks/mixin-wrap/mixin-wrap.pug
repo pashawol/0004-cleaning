@@ -162,3 +162,11 @@ mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
 	or
 	+piclazy('consult','png')
 
+mixin chat-link()
+	+e.icon-wrap
+		//- -let telnumber= '+79068988888'
+		-let telnumber= '+375447659832'
+		a(target="_blank" href=`https://wa.me/${telnumber}`)
+			+icon("whatsapp")
+		a.viber-link(href=`viber://add?number=${telnumber}`   data-desktop=`viber://chat?number=${telnumber}`)
+			+icon("viber")

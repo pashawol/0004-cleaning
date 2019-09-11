@@ -111,7 +111,18 @@ jQuery(document).ready(function ($) {
 			$(".form-wrap__toggle").click(function(){
 				$(".form-wrap__toggle-block").toggle()
 			})
-		 
+			$(".viber-link").each(function(){
+
+				if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+					// some code..
+					$(this).attr('href', $(this).data("desktop"))
+					alert($(this).attr('href'))
+					// $(this).attr('href', $(this).data("mobile"))
+					// alert('mobile')
+				}
+				else{ 
+				}
+			})
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
