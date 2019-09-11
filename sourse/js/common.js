@@ -113,15 +113,9 @@ jQuery(document).ready(function ($) {
 			})
 			$(".viber-link").each(function(){
 
-				if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-					// some code..
-					$(this).attr('href', $(this).data("desktop"))
-					alert($(this).attr('href'))
-					// $(this).attr('href', $(this).data("mobile"))
-					// alert('mobile')
-				}
-				else{ 
-				}
+				if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { 
+					$(this).attr('href', $(this).data("desktop")) 
+				} 
 			})
 });
 JSCCommon = {
